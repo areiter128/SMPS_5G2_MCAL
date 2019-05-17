@@ -152,6 +152,14 @@
     #define __P33SMPS_CK__
     #define __P33SMPS_CK5__
 
+#elif defined (__dsPIC33CK32MP102__) || defined (__dsPIC33CK64MP102__) || \
+      defined (__dsPIC33CK32MP103__) || defined (__dsPIC33CK64MP103__) || \
+      defined (__dsPIC33CK32MP105__) || defined (__dsPIC33CK64MP105__)
+// Ara family of devices
+
+    #define __P33SMPS_CK__
+    #define __P33SMPS_CK1__
+
 #else
 
 //    #pragma message "selected device not supported by peripheral driver libraries"
@@ -290,6 +298,13 @@
     #define __P33SMPS_CH508__
 #elif defined (__dsPIC33CH256MP508__) || defined (__dsPIC33CH512MP508__)
     #define __P33SMPS_CH508__
+
+#elif defined (__dsPIC33CK32MP102__) || defined (__dsPIC33CK64MP102__)
+    #define __P33SMPS_CK102__
+#elif defined (__dsPIC33CK32MP103__) || defined (__dsPIC33CK64MP103__)
+    #define __P33SMPS_CK103__
+#elif defined (__dsPIC33CK32MP105__) || defined (__dsPIC33CK64MP105__)
+    #define __P33SMPS_CK105__
 
 #elif defined (__dsPIC33CK32MP502__) || defined (__dsPIC33CK64MP502__) || defined (__dsPIC33CK128MP502__) || defined (__dsPIC33CK256MP502__)
     #define __P33SMPS_CK502__
