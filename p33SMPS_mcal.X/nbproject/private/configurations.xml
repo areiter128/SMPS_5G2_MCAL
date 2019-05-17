@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <projectmakefile>Makefile</projectmakefile>
-  <defaultConf>0</defaultConf>
+  <defaultConf>2</defaultConf>
   <confs>
     <conf name="__P33SMPS_CH_MSTR__" type="3">
       <platformToolSN></platformToolSN>
@@ -40,7 +40,7 @@
       </runprofile>
     </conf>
     <conf name="__P33SMPS_CK__" type="3">
-      <platformToolSN></platformToolSN>
+      <platformToolSN>platform-tool-sn</platformToolSN>
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.36\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>

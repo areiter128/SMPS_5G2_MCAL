@@ -408,6 +408,32 @@
 
     #endif
 
+#elif defined (__P33SMPS_CK506__) || defined (__P33SMPS_CK508__)
+
+    #define ADC_CORE_COUNT          3					// Number of ADC Cores available
+    #define ADC_ANINPUT_COUNT       18                  // Number of analog inputs
+    #define ADC_SHARED_CORE_INDEX   (ADC_CORE_COUNT - 1)    // Arteficially assigned index for shared ADC core
+
+    #define REG_ADC_CHANNEL_L_MSK   0b1111111111111111
+    #define REG_ADC_CHANNEL_H_MSK   0b0000000000000011
+
+    #define ADC_ADCONL_REG_OFFSET   2
+    #define ADC_ADCONH_REG_OFFSET   2
+    #define ADC_ADCORE_REG_OFFSET   2
+
+    #define ADC_ADMODL_REG_OFFSET   2
+    #define ADC_ADCONH_REG_OFFSET   2
+    #define ADC_ADCAL_REG_OFFSET    1
+
+    #define ADC_ADTRIG_REG_OFFSET   1
+
+    // Digital Comparators
+    #define REG_ADCMP_COUNT         4
+    #define REG_ADCMP_REG_OFFSET    2
+    #define REG_ADCMPxEN_REG_OFFSET 4
+    #define REG_ADCMPxLO_OFFSET     4
+    #define REG_ADCMPxHI_OFFSET     4
+
 #else
 
     #pragma message "=== selected device is not defined and may not be supported ==="
@@ -2351,6 +2377,18 @@ typedef union {
     typedef enum {
         ADCON4_C0CHS_S1ANC0 = 0b11, // Dedicated ADC Core 1 Input is Slave Core #01 positive differential input of AN0 
         ADCON4_C0CHS_SPGA1 = 0b10, // Dedicated ADC Core 1 Input is Slave Core #0 PGA1 output
+        ADCON4_C0CHS_S1ANA0 = 0b01, // Dedicated ADC Core 1 Input is Slave Core #0 alternative AN0 input
+        ADCON4_C0CHS_S1AN0 = 0b00 // Dedicated ADC Core 1 Input is Slave Core #0 AN0 input
+    } ADCON4_C0CHS_e; // Dedicated ADC Core 0 Input Channel Selection
+
+    #elif defined (__P33SMPS_CK__)
+
+    typedef enum {
+        ADCON4_C1CHS_S1ANA1 = 0b01, // Dedicated ADC Core 1 Input is Slave Core #1 alternative AN1 input
+        ADCON4_C1CHS_S1AN1 = 0b00 // Dedicated ADC Core 1 Input is Slave Core #1 AN1 input
+    } ADCON4_C1CHS_e; // Dedicated ADC Core 1 Input Channel Selection
+
+    typedef enum {
         ADCON4_C0CHS_S1ANA0 = 0b01, // Dedicated ADC Core 1 Input is Slave Core #0 alternative AN0 input
         ADCON4_C0CHS_S1AN0 = 0b00 // Dedicated ADC Core 1 Input is Slave Core #0 AN0 input
     } ADCON4_C0CHS_e; // Dedicated ADC Core 0 Input Channel Selection

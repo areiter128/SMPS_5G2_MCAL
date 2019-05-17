@@ -733,7 +733,7 @@
     #define PIN_VRP6            (181U)
 
 
-#elif defined (__P33SMPS_CH__)
+#elif defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
 
 	// driver definitions for maximum pin number supported
 	#define RP_PINNO_MIN		32
