@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/*@@p33MP_timer.h
+/*!p33MP_timer.h
  * ***************************************************************************
  * Summary:
  * Driver file for the dsPIC33xxxGS Timer SFRs
@@ -45,7 +45,7 @@
 #include <stdbool.h>
 #include "../p33SMPS_devices.h"
 
-/*@@p33FGS_timer.h
+/*!p33FGS_timer.h
  * ************************************************************************************************
  * Summary:
  * Header file with additional defines for the dsPIC33FxxGS timer SFRs

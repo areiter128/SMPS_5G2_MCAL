@@ -29,7 +29,7 @@
 #include "p33SMPS_hspwm_c.h"
 
 
-/*@@p33MP_hspwm.c
+/*!p33MP_hspwm.c
  * ************************************************************************************************
  * Summary:
  * Driver file for the dsPIC33CxxxMPxxx-PWM SFRs
@@ -39,7 +39,7 @@
  * driver file contains initialization routines for all required settings.
  * ***********************************************************************************************/
 
-/*@@hspwm_power_enable
+/*!hspwm_power_enable
  * ************************************************************************************************
  * Summary:
  * Enables the bias power to the high resolution PWM module
@@ -58,7 +58,7 @@ uint16_t hspwm_power_enable(void) {
     return(1 - _PWMMD);
 }
 
-/*@@hspwm_power_disable
+/*!hspwm_power_disable
  * ************************************************************************************************
  * Summary:
  * Disables the bias power to the high resolution PWM module
@@ -77,7 +77,7 @@ uint16_t hspwm_power_disable(void) {
     return(1 - _PWMMD);
 }
 
-/*@@hspwm_init_independent_pwm
+/*!hspwm_init_independent_pwm
  * ************************************************************************************************
  * Summary:
  * Sets the basic configuration of a PWM generator 
@@ -137,7 +137,7 @@ uint16_t hspwm_init_independent_pwm(
 
 }
 
-/*@@hspwm_init_pwm_timing
+/*!hspwm_init_pwm_timing
  * ************************************************************************************************
  * Summary:
  * Sets the basic signal timing configuration of a PWM generator 
@@ -188,7 +188,7 @@ uint16_t hspwm_init_pwm_timing(uint16_t channel, uint16_t regPGxPER, uint16_t re
 
 }
 
-/*@@hspwm_enable_pwm
+/*!hspwm_enable_pwm
  * ************************************************************************************************
  * Summary:
  * Enables a PWM generator 
@@ -240,7 +240,7 @@ uint16_t hspwm_enable_pwm(uint16_t channel, bool wait_for_hres)
 
 }
 
-/*@@hspwm_disable_pwm
+/*!hspwm_disable_pwm
  * ************************************************************************************************
  * Summary:
  * Disables a PWM generator 

@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/*@@p33MP_timer.c
+/*!p33MP_timer.c
  * ***************************************************************************
  * Summary:
  * Driver file for the dsPIC33xxxGS Timer SFRs
@@ -45,7 +45,7 @@
 #include "p33SMPS_timer.h"
 
 
-/*@@p33MP_timer.c
+/*!p33MP_timer.c
  * ************************************************************************************************
  * Summary:
  * Driver file for the dsPIC33xxxGS Timer SFRs
@@ -56,7 +56,7 @@
  * ***********************************************************************************************/
 
 
-/*@@gstmr_init_timer16b
+/*!gstmr_init_timer16b
  * ************************************************************************************************
  * Summary:
  * Initializes a specific timer unit in 16-bit mode
@@ -264,7 +264,7 @@ uint16_t gstmr_get_tmr_config(uint16_t index, TxCON_CONTROL_REGISTER_t *regTCON,
 }
 
 
-/*@@gstmr_enable
+/*!gstmr_enable
  * ************************************************************************************************
  * Summary:
  * Enables a specific timer unit in 16-bit mode
@@ -338,7 +338,7 @@ uint16_t gstmr_enable(uint16_t index, TIMER_ISR_ENABLE_STATE_e isr_enable)
 }
 
 
-/*@@gstmr_disable
+/*!gstmr_disable
  * ************************************************************************************************
  * Summary:
  * Disables a specific timer unit in 16-bit mode
@@ -397,7 +397,7 @@ uint16_t gstmr_disable(uint16_t index)
 }
 
 
-/*@@gstmr_reset
+/*!gstmr_reset
  * ************************************************************************************************
  * Summary:
  * Resets a specific timer unit in 16-bit mode

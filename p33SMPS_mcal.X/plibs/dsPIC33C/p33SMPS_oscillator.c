@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/* @@p33SMPS_oscillator.c
+/*!p33SMPS_oscillator.c
  * ***************************************************************************
  *
  * File:   p33SMPS_oscillator.c
@@ -44,7 +44,7 @@
 #define OSC_CLKSW_TIMEOUT	5000	// value to set the timeout for clock switching operations
 
 
-/*@@init_FRC_Defaults(OSCCON_xOSC_e osc_type)
+/*!init_FRC_Defaults(OSCCON_xOSC_e osc_type)
  * ************************************************************************************************
  * Summary:
  * Initializes the major oscillator and the PLL module step by step by using clock switching
@@ -127,7 +127,7 @@ inline int16_t init_FRCCLK_Defaults(CPU_SPEED_DEFAULTS_e cpu_speed)
 }
 
 
-/*@@init_FRCOSC(OSC_CONFIG_t osc_config)
+/*!init_FRCOSC(OSC_CONFIG_t osc_config)
  * ************************************************************************************************
  * Summary:
  * Initializes the internal RC oscillator divider and tuning register
@@ -183,7 +183,7 @@ int16_t init_FRCOSC(CLKDIV_FRCDIVN_e frc_div, OSCTUN_TUN_e frc_tune)
     
 }
 
-/*@@init_FOSC(OSC_CONFIG_t osc_config)
+/*!init_FOSC(OSC_CONFIG_t osc_config)
  * ************************************************************************************************
  * Summary:
  * Initializes the major oscillator and the PLL module step by step by using clock switching
@@ -297,7 +297,7 @@ uint16_t _n=0, err=0;
 
 }
 
-/*@@init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config)
+/*!init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config)
  * ************************************************************************************************
  * Summary:
  * Initializes the auxiliary clock and its PLL module step by step 
@@ -358,7 +358,7 @@ inline int16_t init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config)
     
 }
  
-/*@@init_AUXCLK_Defaults(AUXOSC_CONFIG_t aux_clock_config)
+/*!init_AUXCLK_Defaults(AUXOSC_CONFIG_t aux_clock_config)
  * ************************************************************************************************
  * Summary:
  * Initializes the auxiliary clock and its PLL module step by step 

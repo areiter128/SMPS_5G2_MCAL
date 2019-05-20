@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/* @@p33SMPS_gpio.c
+/*!p33SMPS_gpio.c
  * ***************************************************************************
  *
  * File:   p33SMPS_mailboxes.c

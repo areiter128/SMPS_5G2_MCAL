@@ -28,7 +28,7 @@
 #include "p33SMPS_hsadc.h"
 
 
-/*@@p33EGS_adc.c
+/*!p33EGS_adc.c
  * ************************************************************************************************
  * Summary:
  * Driver file for the dsPIC33ExxGS-ADC SFRs
@@ -39,7 +39,7 @@
  * ***********************************************************************************************/
 
 
-/*@@hsadc_module_power_up()
+/*!hsadc_module_power_up()
  * *****************************************************************************************************
  * Summary:
  * Turns on the base power of the ADC module 
@@ -67,7 +67,7 @@ uint16_t hsadc_module_power_up(void)
 
 } 
 
-/*@@hsadc_module_power_down()
+/*!hsadc_module_power_down()
  * *****************************************************************************************************
  * Summary:
  * Turns off the base power of the ADC module 
@@ -90,7 +90,7 @@ uint16_t hsadc_module_power_down(void)
 
 }
 
-/*@@hsadc_init_adc
+/*!hsadc_init_adc
  * ************************************************************************************************
  * Summary:
  * Initializes the basic ADC configuration
@@ -200,7 +200,7 @@ uint16_t hsadc_init_adc_module(REGBLK_ADCON1_t cfgADCON1,
 
 }
 
-/*@@hsadc_init_adc_core
+/*!hsadc_init_adc_core
  * ************************************************************************************************
  * Summary:
  * Initializes an individual ADC Core configuration
@@ -276,7 +276,7 @@ volatile uint16_t reg_offset=0;
     
 }
 
-/*@@hsadc_module_enable()
+/*!hsadc_module_enable()
  * ************************************************************************************************
  * Summary:
  * Enables the ADC module
@@ -296,7 +296,7 @@ uint16_t hsadc_module_enable(void)
 	 
 }
 
-/*@@hsadc_module_disable()
+/*!hsadc_module_disable()
  * ************************************************************************************************
  * Summary:
  * Disables the ADC module
@@ -317,7 +317,7 @@ uint16_t hsadc_module_disable(void)
 
 }
 
-/*@@hsadc_reset()
+/*!hsadc_reset()
  * ************************************************************************************************
  * Summary:
  * Resets ADC configuration
@@ -353,7 +353,7 @@ uint16_t hsadc_reset(void)
 	return(1);
 }
 
-/*@@hsadc_power_on_adc_core()
+/*!hsadc_power_on_adc_core()
  * ************************************************************************************************
  * Summary:
  * Turns on a single ADC core considering warm-up time
@@ -379,7 +379,7 @@ uint16_t hsadc_check_adc_cores_ready(void)
 
 }
 
-/*@@hsadc_calibrate_adc_core()
+/*!hsadc_calibrate_adc_core()
  * ************************************************************************************************
  * Summary:
  * Calls the ADC calibration of a single ADC core
@@ -462,7 +462,7 @@ uint16_t hsadc_calibrate_adc_core(uint16_t index, uint16_t calib_mode)
 	
 }
 #endif
-/*@@hsadc_power_on_adc_core()
+/*!hsadc_power_on_adc_core()
  * ************************************************************************************************
  * Summary:
  * Turns on a single ADC core considering warm-up time
@@ -528,7 +528,7 @@ uint16_t hsadc_power_on_adc_core(uint16_t index)
 	
 }
 
-/*@@hsadc_set_adc_core_trigger()
+/*!hsadc_set_adc_core_trigger()
  * ************************************************************************************************
  * Summary:
  * Configures interrupt trigger setting of an individual Analog Input
@@ -567,7 +567,7 @@ uint16_t hsadc_set_adc_input_trigger_source(uint16_t index, uint16_t trigger_sou
     return(1);
 }
 
-/*@@hsadc_set_adc_input_interrupt()
+/*!hsadc_set_adc_input_interrupt()
  * ************************************************************************************************
  * Summary:
  * configures the interrupt generation of a single ADC core
@@ -628,7 +628,7 @@ uint16_t hsadc_set_adc_input_interrupt(uint16_t index, uint16_t interrupt_enable
 	
 }
 
-/*@@hsadc_init_adc_comp
+/*!hsadc_init_adc_comp
  * ************************************************************************************************
  * Summary:
  * Initializes an individual digital ADC Comparator configuration

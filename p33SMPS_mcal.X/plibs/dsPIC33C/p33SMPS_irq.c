@@ -28,7 +28,7 @@
 #include <xc.h>
 
 
-/*@@p33GS_irq.c
+/*!p33GS_irq.c
  * ************************************************************************************************
  * Summary:
  * Driver file for the dsPIC33ExxGS Interrupt Controller SFRs
@@ -40,7 +40,7 @@
  * ***********************************************************************************************/
 
 
-/*@@gsirq_init_irq
+/*!gsirq_init_irq
  * ************************************************************************************************
  * Summary:
  * Initializes the basic interrupt controller configuration
@@ -74,7 +74,7 @@ uint16_t gsirq_init_irq(uint16_t regINTCON1, uint16_t regINTCON2, uint16_t regIN
 	
 }
 
-/*@@gsirq_get_current_irq_priority_level
+/*!gsirq_get_current_irq_priority_level
  * ************************************************************************************************
  * Summary:
  * Reads the current interrupt priority level from SR and CORCON register
@@ -103,7 +103,7 @@ uint16_t gsirq_get_current_irq_priority_level(void)
 	
 }
 
-/*@@gsirq_init_soft_traps
+/*!gsirq_init_soft_traps
  * ************************************************************************************************
  * Summary:
  * Initializes the soft traps for accumulator overflow options

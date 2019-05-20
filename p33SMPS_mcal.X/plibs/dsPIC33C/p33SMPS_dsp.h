@@ -27,7 +27,7 @@
 #include "../p33SMPS_devices.h"
 
 #if defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
-/*@@p33SMPS_dsp.h
+/*!p33SMPS_dsp.h
  * ************************************************************************************************
  * Summary:
  * Header file with additional defines for the dsPIC33FxxGS-DSP SFRs

@@ -1,4 +1,4 @@
-/*@@Software License Agreement
+/*!Software License Agreement
  * ************************************************************************************************
  *
  * Software License Agreement
@@ -21,7 +21,7 @@
  * THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
  *
  * ***********************************************************************************************/
-/*@@irq.h
+/*!irq.h
  * ************************************************************************************************
  * Summary:
  * Generic Interrupt Configuration Driver Module (header file)

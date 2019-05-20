@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/* @@p33SMPS_gpio.h
+/*!p33SMPS_gpio.h
  * ***************************************************************************
  *
  * File:   p33SMPS_gpio.h
@@ -36,7 +36,7 @@
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include <stdint.h>
 
-extern uint16_t gpio_reset(void);
+extern volatile uint16_t gpio_reset(void);
 
 #endif	/* __MCAL_P33_SMPS_GPIO_H__ */
 
