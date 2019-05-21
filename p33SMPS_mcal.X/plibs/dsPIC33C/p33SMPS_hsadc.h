@@ -411,11 +411,37 @@
 #elif defined (__P33SMPS_CK506__) || defined (__P33SMPS_CK508__)
 
     #define ADC_CORE_COUNT          3					// Number of ADC Cores available
-    #define ADC_ANINPUT_COUNT       18                  // Number of analog inputs
+    #define ADC_ANINPUT_COUNT       20                  // Number of analog inputs
     #define ADC_SHARED_CORE_INDEX   (ADC_CORE_COUNT - 1)    // Arteficially assigned index for shared ADC core
 
     #define REG_ADC_CHANNEL_L_MSK   0b1111111111111111
-    #define REG_ADC_CHANNEL_H_MSK   0b0000000000000011
+    #define REG_ADC_CHANNEL_H_MSK   0b0000000000001111
+
+    #define ADC_ADCONL_REG_OFFSET   2
+    #define ADC_ADCONH_REG_OFFSET   2
+    #define ADC_ADCORE_REG_OFFSET   2
+
+    #define ADC_ADMODL_REG_OFFSET   2
+    #define ADC_ADCONH_REG_OFFSET   2
+    #define ADC_ADCAL_REG_OFFSET    1
+
+    #define ADC_ADTRIG_REG_OFFSET   1
+
+    // Digital Comparators
+    #define REG_ADCMP_COUNT         4
+    #define REG_ADCMP_REG_OFFSET    2
+    #define REG_ADCMPxEN_REG_OFFSET 4
+    #define REG_ADCMPxLO_OFFSET     4
+    #define REG_ADCMPxHI_OFFSET     4
+
+#elif defined (__P33SMPS_CK205__) || defined (__P33SMPS_CK505__)
+
+    #define ADC_CORE_COUNT          3					// Number of ADC Cores available
+    #define ADC_ANINPUT_COUNT       19                  // Number of analog inputs
+    #define ADC_SHARED_CORE_INDEX   (ADC_CORE_COUNT - 1)    // Arteficially assigned index for shared ADC core
+
+    #define REG_ADC_CHANNEL_L_MSK   0b1111111111111111
+    #define REG_ADC_CHANNEL_H_MSK   0b0000000000000111
 
     #define ADC_ADCONL_REG_OFFSET   2
     #define ADC_ADCONH_REG_OFFSET   2
