@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <projectmakefile>Makefile</projectmakefile>
+<<<<<<< HEAD
   <defaultConf>1</defaultConf>
+=======
+  <defaultConf>2</defaultConf>
+>>>>>>> develop
   <confs>
     <conf name="__P33SMPS_CH_MSTR__" type="3">
       <platformToolSN></platformToolSN>
@@ -23,7 +27,7 @@
     </conf>
     <conf name="__P33SMPS_CH_SLV__" type="3">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.36\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -40,7 +44,11 @@
       </runprofile>
     </conf>
     <conf name="__P33SMPS_CK__" type="3">
+<<<<<<< HEAD
       <platformToolSN>:=MPLABComm-USB-Microchip:=&lt;vid>04D8:=&lt;pid>9004:=&lt;rev>0100:=&lt;man>Microchip Technology, Inc. (www.microchip.com):=&lt;prod>MPLAB REAL ICE tm (www.microchip.com):=&lt;sn>JIT153010042:=&lt;drv>x:=&lt;xpt>b:=end</platformToolSN>
+=======
+      <platformToolSN></platformToolSN>
+>>>>>>> develop
       <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.40\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
