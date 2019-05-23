@@ -460,6 +460,8 @@
     #define REG_ADCMPxLO_OFFSET     4
     #define REG_ADCMPxHI_OFFSET     4
 
+// ToDo: Add device support for missing dsPIC33CKxxMP10x, 20x and 50x device derivatives
+
 #else
 
     #pragma message "=== selected device is not defined and may not be supported ==="
