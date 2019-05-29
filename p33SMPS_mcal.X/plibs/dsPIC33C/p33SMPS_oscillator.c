@@ -77,7 +77,7 @@
  * registers of the configuration bits may be required
  * ************************************************************************************************/
 
-inline int16_t init_FRCCLK_Defaults(CPU_SPEED_DEFAULTS_e cpu_speed)
+inline volatile uint16_t init_FRCCLK_Defaults(CPU_SPEED_DEFAULTS_e cpu_speed)
 {
     volatile int16_t fres = 0;
     volatile OSC_CONFIG_t osc;
@@ -155,7 +155,7 @@ inline int16_t init_FRCCLK_Defaults(CPU_SPEED_DEFAULTS_e cpu_speed)
  * If a oscillator switch-over is performed, additional settings in the _FOSCSEL and _FOSC
  * registers of the configuration bits may be required
  * ************************************************************************************************/
-int16_t init_FRCOSC(CLKDIV_FRCDIVN_e frc_div, OSCTUN_TUN_e frc_tune)
+inline volatile uint16_t init_FRCOSC(CLKDIV_FRCDIVN_e frc_div, OSCTUN_TUN_e frc_tune)
 {
 #if defined (__P33SMPS_CH_MSTR__) || defined (__P33SMPS_CK__)
 
@@ -213,7 +213,7 @@ int16_t init_FRCOSC(CLKDIV_FRCDIVN_e frc_div, OSCTUN_TUN_e frc_tune)
  * registers of the configuration bits may be required
  * ************************************************************************************************/
 
-inline int16_t init_FOSC(OSC_CONFIG_t osc_config)
+inline volatile uint16_t init_FOSC(OSC_CONFIG_t osc_config)
 {
 
 uint16_t _n=0, err=0;
@@ -322,7 +322,7 @@ uint16_t _n=0, err=0;
  *
  * ************************************************************************************************/
 
-inline int16_t init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config)
+inline volatile uint16_t init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config)
 {
     volatile uint16_t _n=0;
     
@@ -383,7 +383,7 @@ inline int16_t init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config)
  *
  * ************************************************************************************************/
 
- inline int16_t init_AUXCLK_500MHz(void)
+ inline volatile uint16_t init_AUXCLK_500MHz(void)
  {
     volatile uint16_t fres = 0;
     volatile AUXOSC_CONFIG_t aux_clock_config;

@@ -1279,10 +1279,10 @@ typedef struct {
 
 
 // Prototypes
-extern inline uint16_t hspwm_power_enable(void);
-extern inline uint16_t hspwm_power_disable(void);
+extern volatile uint16_t hspwm_power_enable(void);
+extern volatile uint16_t hspwm_power_disable(void);
 
-extern inline uint16_t hspwm_init_independent_pwm
+extern volatile uint16_t hspwm_init_independent_pwm
 (
     uint16_t channel,
     REGBLK_PCLK_CONFIG_t regPCLK,
@@ -1292,7 +1292,7 @@ extern inline uint16_t hspwm_init_independent_pwm
     REGBLK_PGxDEAD_TIME_t regPGxDT
     );
 
-extern inline uint16_t hspwm_init_pwm_timing
+extern volatile uint16_t hspwm_init_pwm_timing
 (
     uint16_t channel,
     uint16_t regPGxPER,
@@ -1300,16 +1300,16 @@ extern inline uint16_t hspwm_init_pwm_timing
     uint16_t regPGxPHASE
     );
 
-extern inline uint16_t hspwm_enable_pwm(uint16_t channel, bool wait_for_hres);
-extern inline uint16_t hspwm_disable_pwm(uint16_t channel);
-extern inline uint16_t hspwm_ovr_hold(uint16_t channel);
-extern inline uint16_t hspwm_ovr_release(uint16_t channel);
-extern inline uint16_t hspwm_ovr_release_high_side(uint16_t channel);
-extern inline uint16_t hspwm_ovr_release_low_side(uint16_t channel);
-extern inline uint16_t hspwm_set_gpio_high_side(uint16_t channel);
-extern inline uint16_t hspwm_reset_gpio_high_side(uint16_t channel);
-extern inline uint16_t hspwm_set_gpio_low_side(uint16_t channel);
-extern inline uint16_t hspwm_reset_gpio_low_side(uint16_t channel);
+extern volatile uint16_t hspwm_enable_pwm(uint16_t channel, bool wait_for_hres);
+extern volatile uint16_t hspwm_disable_pwm(uint16_t channel);
+extern volatile uint16_t hspwm_ovr_hold(uint16_t channel);
+extern volatile uint16_t hspwm_ovr_release(uint16_t channel);
+extern volatile uint16_t hspwm_ovr_release_high_side(uint16_t channel);
+extern volatile uint16_t hspwm_ovr_release_low_side(uint16_t channel);
+extern volatile uint16_t hspwm_set_gpio_high_side(uint16_t channel);
+extern volatile uint16_t hspwm_reset_gpio_high_side(uint16_t channel);
+extern volatile uint16_t hspwm_set_gpio_low_side(uint16_t channel);
+extern volatile uint16_t hspwm_reset_gpio_low_side(uint16_t channel);
 
 #endif
 // End of File _P33SMPS_SMPS_PWM_H_

@@ -998,19 +998,19 @@ typedef union
 
 // Prototypes
 
-extern inline uint16_t smps_uart_init(uint16_t index, UxMODE_CONTROL_REGISTER_t regUxMODE, UxSTA_CONTROL_REGISTER_t regUxSTA);
-extern inline uint8_t  smps_uart_read(volatile uint16_t index);
-extern inline uint16_t smps_uart_write(uint16_t index, uint8_t txData);
-extern inline uint16_t smps_uart_get_status(volatile uint16_t index);
+extern uint16_t smps_uart_init(uint16_t index, UxMODE_CONTROL_REGISTER_t regUxMODE, UxSTA_CONTROL_REGISTER_t regUxSTA);
+extern uint8_t  smps_uart_read(volatile uint16_t index);
+extern uint16_t smps_uart_write(uint16_t index, uint8_t txData);
+extern uint16_t smps_uart_get_status(volatile uint16_t index);
 
-extern inline uint16_t smps_uart_enable(uint16_t index);
-extern inline uint16_t smps_uart_disable(uint16_t index);
-extern inline uint16_t smps_uart_dispose(uint16_t index);
+extern uint16_t smps_uart_enable(uint16_t index);
+extern uint16_t smps_uart_disable(uint16_t index);
+extern uint16_t smps_uart_dispose(uint16_t index);
 
-extern inline uint16_t smps_uart_power_on(uint16_t index);
-extern inline uint16_t smps_uart_power_off(uint16_t index);
+extern uint16_t smps_uart_power_on(uint16_t index);
+extern uint16_t smps_uart_power_off(uint16_t index);
 
-extern inline uint16_t smps_uart_open_port(uint16_t index, 
+extern uint16_t smps_uart_open_port(uint16_t index, 
     UART_BAUDRATE_SETTING_e baud, UART_DATA_BIT_SETTING_e data_bits, UART_PARITY_SETTING_e parity, UART_STOP_BIT_SETTING_e stop_bits, 
     UART_ISR_PRIORITY_e isr_priority);
 

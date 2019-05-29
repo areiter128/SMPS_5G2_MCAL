@@ -142,6 +142,14 @@
         #define __P33SMPS_CH_MSTR__
     #endif
 
+#elif defined (__dsPIC33CK32MP102__) || defined (__dsPIC33CK64MP102__) || \
+      defined (__dsPIC33CK32MP103__) || defined (__dsPIC33CK64MP103__) || \
+      defined (__dsPIC33CK32MP105__) || defined (__dsPIC33CK64MP105__)
+// Ara family of devices
+
+    #define __P33SMPS_CK__
+    #define __P33SMPS_CK1__
+
 #elif defined (__dsPIC33CK32MP502__) || defined (__dsPIC33CK64MP502__) || defined (__dsPIC33CK128MP502__) || defined (__dsPIC33CK256MP502__) || \
       defined (__dsPIC33CK32MP503__) || defined (__dsPIC33CK64MP503__) || defined (__dsPIC33CK128MP503__) || defined (__dsPIC33CK256MP503__) || \
       defined (__dsPIC33CK32MP505__) || defined (__dsPIC33CK64MP505__) || defined (__dsPIC33CK128MP505__) || defined (__dsPIC33CK256MP505__) || \
@@ -151,14 +159,6 @@
 
     #define __P33SMPS_CK__
     #define __P33SMPS_CK5__
-
-#elif defined (__dsPIC33CK32MP102__) || defined (__dsPIC33CK64MP102__) || \
-      defined (__dsPIC33CK32MP103__) || defined (__dsPIC33CK64MP103__) || \
-      defined (__dsPIC33CK32MP105__) || defined (__dsPIC33CK64MP105__)
-// Ara family of devices
-
-    #define __P33SMPS_CK__
-    #define __P33SMPS_CK1__
 
 #else
 

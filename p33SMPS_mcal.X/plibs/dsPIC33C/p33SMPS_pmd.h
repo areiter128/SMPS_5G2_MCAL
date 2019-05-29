@@ -154,7 +154,7 @@ typedef enum
 
 
 // global prototypes
-extern uint16_t pmd_reset(pmd_enable_setting_e power_on_state);
+extern volatile uint16_t pmd_reset(pmd_enable_setting_e power_on_state);
 
 #endif	/* MCAL_P33_SMPS_PDM_H */
 

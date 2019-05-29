@@ -41,7 +41,7 @@
 
 #include "p33SMPS_pmd.h"
 
-uint16_t pmd_reset(pmd_enable_setting_e power_on_state) {
+inline volatile uint16_t pmd_reset(pmd_enable_setting_e power_on_state) {
     
     #ifdef PMDCON
     PMDCONbits.PMDLOCK = 1; // Peripheral Module Disable-bits (1=can be set, 0=cannot be set) in software

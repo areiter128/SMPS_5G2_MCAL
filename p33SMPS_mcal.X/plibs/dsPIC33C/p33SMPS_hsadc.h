@@ -4410,10 +4410,10 @@ typedef enum {
 
 
 // Prototypes
-extern inline uint16_t hsadc_module_power_up(void);
-extern inline uint16_t hsadc_module_power_down(void);
+extern volatile uint16_t hsadc_module_power_up(void);
+extern volatile uint16_t hsadc_module_power_down(void);
 
-extern inline uint16_t hsadc_init_adc_module
+extern volatile uint16_t hsadc_init_adc_module
 (
     REGBLK_ADCON1_t cfgADCON1,
     REGBLK_ADCON2_t cfgADCON2,
@@ -4422,22 +4422,22 @@ extern inline uint16_t hsadc_init_adc_module
     REGBLK_ADCON5_t cfgADCON5
     );
 
-extern inline uint16_t hsadc_init_adc_core(uint16_t index, uint16_t regADCORExL, uint16_t regADCORExH);
+extern volatile uint16_t hsadc_init_adc_core(uint16_t index, uint16_t regADCORExL, uint16_t regADCORExH);
 
-extern inline uint16_t hsadc_power_on_adc_core(uint16_t index);
-extern inline uint16_t hsadc_module_enable(void);
-extern inline uint16_t hsadc_module_disable(void);
-extern inline uint16_t hsadc_reset(void);
-extern inline uint16_t hsadc_check_adc_cores_ready(void);
+extern volatile uint16_t hsadc_power_on_adc_core(uint16_t index);
+extern volatile uint16_t hsadc_module_enable(void);
+extern volatile uint16_t hsadc_module_disable(void);
+extern volatile uint16_t hsadc_reset(void);
+extern volatile uint16_t hsadc_check_adc_cores_ready(void);
 
 #if defined (__P33SMPS_EP__)
-extern inline uint16_t hsadc_calibrate_adc_core(uint16_t index, uint16_t calib_mode);
+extern volatile uint16_t hsadc_calibrate_adc_core(uint16_t index, uint16_t calib_mode);
 #endif
 
-extern inline uint16_t hsadc_set_adc_input_trigger_source(uint16_t index, uint16_t interrupt_trigger);
-extern inline uint16_t hsadc_set_adc_input_interrupt(uint16_t index, uint16_t interrupt_enable, uint16_t early_interrupt_enable);
+extern volatile uint16_t hsadc_set_adc_input_trigger_source(uint16_t index, uint16_t interrupt_trigger);
+extern volatile uint16_t hsadc_set_adc_input_interrupt(uint16_t index, uint16_t interrupt_enable, uint16_t early_interrupt_enable);
 
-extern inline uint16_t hsadc_init_adc_comp(uint16_t index, uint16_t input_no, uint16_t regADCMPxCON, uint16_t regADCMPxLO, uint16_t regADCMPxHI);
+extern volatile uint16_t hsadc_init_adc_comp(uint16_t index, uint16_t input_no, uint16_t regADCMPxCON, uint16_t regADCMPxLO, uint16_t regADCMPxHI);
 
 
 

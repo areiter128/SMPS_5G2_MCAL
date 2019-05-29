@@ -44,10 +44,10 @@
 
 #include "../p33SMPS_devices.h"
 
-extern inline uint16_t gsirq_init_irq(uint16_t regINTCON1, uint16_t regINTCON2, uint16_t regINTCON3);
-extern inline uint16_t gsirq_get_current_irq_priority_level(void);
-extern inline uint16_t gsirq_init_soft_traps(unsigned int accumulator_a_overflow_trap_enable, unsigned int accumulator_b_overflow_trap_enable, 
-                    unsigned int accumulator_catastrophic_overflow_trap_enable);
+extern volatile uint16_t gsirq_init_irq(uint16_t regINTCON1, uint16_t regINTCON2, uint16_t regINTCON3);
+extern volatile uint16_t gsirq_get_current_irq_priority_level(void);
+extern volatile uint16_t gsirq_init_soft_traps(uint16_t accumulator_a_overflow_trap_enable, uint16_t accumulator_b_overflow_trap_enable, 
+                    uint16_t accumulator_catastrophic_overflow_trap_enable);
 
 #if defined (__P33SMPS_EP__) || defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
 

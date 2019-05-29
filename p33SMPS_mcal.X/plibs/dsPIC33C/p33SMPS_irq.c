@@ -53,7 +53,7 @@
  * are set here.
  * ***********************************************************************************************/
 
-uint16_t gsirq_init_irq(uint16_t regINTCON1, uint16_t regINTCON2, uint16_t regINTCON3)
+inline volatile uint16_t gsirq_init_irq(uint16_t regINTCON1, uint16_t regINTCON2, uint16_t regINTCON3)
 {
 
     volatile uint16_t reg_buf=0, fres=0;
@@ -83,14 +83,14 @@ uint16_t gsirq_init_irq(uint16_t regINTCON1, uint16_t regINTCON2, uint16_t regIN
  *	(none)
  *
  * Returns:
- *  unsigned int (0...15)
+ *  uint16_t (0...15)
  * 
  * Description:
  * Read the currently active interrupt priority level from the SR and CORCON register and returns
  * a unsigned integer number
  * ***********************************************************************************************/
 
-uint16_t gsirq_get_current_irq_priority_level(void)
+inline volatile uint16_t gsirq_get_current_irq_priority_level(void)
 {
 
     volatile uint16_t reg_buf=0;
@@ -119,8 +119,8 @@ uint16_t gsirq_get_current_irq_priority_level(void)
  * and the catastrophic overflow event trap. (on/off options) 
  * ***********************************************************************************************/
 
-uint16_t gsirq_init_soft_traps(unsigned int accumulator_a_overflow_trap_enable, unsigned int accumulator_b_overflow_trap_enable, 
-                    unsigned int accumulator_catastrophic_overflow_trap_enable)
+inline volatile uint16_t gsirq_init_soft_traps(uint16_t accumulator_a_overflow_trap_enable, uint16_t accumulator_b_overflow_trap_enable, 
+                    uint16_t accumulator_catastrophic_overflow_trap_enable)
 {
     
     _OVATE = accumulator_a_overflow_trap_enable; // Enable Accumulator A Overflow Trap Enable bit

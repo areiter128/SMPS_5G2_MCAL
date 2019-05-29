@@ -363,11 +363,11 @@ typedef union
 
 // Prototypes
 
-extern uint16_t gstmr_init_timer16b(uint16_t index, TxCON_CONTROL_REGISTER_t regTCON, uint32_t period, TIMER_ISR_PRIORITY_e isr_priority);
-extern uint16_t gstmr_get_tmr_config(uint16_t index, TxCON_CONTROL_REGISTER_t *regTCON, uint32_t period, TIMER_ISR_PRIORITY_e *isr_priority);
-extern uint16_t gstmr_enable(uint16_t index, TIMER_ISR_ENABLE_STATE_e isr_enable);
-extern uint16_t gstmr_disable(uint16_t index);
-extern uint16_t gstmr_reset(uint16_t index);
+extern volatile uint16_t gstmr_init_timer16b(uint16_t index, TxCON_CONTROL_REGISTER_t regTCON, uint32_t period, TIMER_ISR_PRIORITY_e isr_priority);
+extern volatile uint16_t gstmr_get_tmr_config(uint16_t index, TxCON_CONTROL_REGISTER_t *regTCON, uint32_t period, TIMER_ISR_PRIORITY_e *isr_priority);
+extern volatile uint16_t gstmr_enable(uint16_t index, TIMER_ISR_ENABLE_STATE_e isr_enable);
+extern volatile uint16_t gstmr_disable(uint16_t index);
+extern volatile uint16_t gstmr_reset(uint16_t index);
 
 
 

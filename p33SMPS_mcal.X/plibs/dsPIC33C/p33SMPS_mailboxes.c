@@ -31,7 +31,7 @@
 
 #include "p33SMPS_mailboxes.h"
 
-volatile uint16_t mbx_reset(void) {
+inline volatile uint16_t mbx_reset(void) {
 
     #if defined (__P33SMPS_CH__)
 

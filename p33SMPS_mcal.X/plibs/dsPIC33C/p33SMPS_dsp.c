@@ -53,7 +53,7 @@
  * 
  * *****************************************************************************************************/
 
-volatile inline uint16_t p33_init_dsp(REGBLK_CORCON_t dsp_cfg)
+inline volatile uint16_t p33_init_dsp(REGBLK_CORCON_t dsp_cfg)
 {
 	volatile uint16_t fres = 0;
 	
@@ -83,7 +83,7 @@ volatile inline uint16_t p33_init_dsp(REGBLK_CORCON_t dsp_cfg)
  * 
  * *****************************************************************************************************/
 
-volatile inline REGBLK_CORCON_t p33SMPS_get_dsp_config(void)
+inline volatile REGBLK_CORCON_t p33SMPS_get_dsp_config(void)
 {
 	volatile REGBLK_CORCON_t dsp_cfg;
 	

@@ -1062,12 +1062,12 @@
 
 // PROTOTYPES FOR p33SMPS_pps.c
     
-extern uint16_t pps_RemapOutput(uint8_t pinno, uint8_t peripheral);
-extern uint16_t pps_UnmapOutput(uint8_t pinno);
-extern uint16_t pps_RemapInput(uint8_t pinno, uint8_t *peripheral);
-extern uint16_t pps_UnmapInput(uint8_t *peripheral);
-extern void pps_LockIO(void);
-extern void pps_UnlockIO(void);
+extern volatile uint16_t pps_RemapOutput(uint8_t pinno, uint8_t peripheral);
+extern volatile uint16_t pps_UnmapOutput(uint8_t pinno);
+extern volatile uint16_t pps_RemapInput(uint8_t pinno, uint8_t *peripheral);
+extern volatile uint16_t pps_UnmapInput(uint8_t *peripheral);
+extern volatile uint16_t pps_LockIO(void);
+extern volatile uint16_t pps_UnlockIO(void);
 
 #endif
 // End of File _P33SMPS_PINMAP_DEF_H_

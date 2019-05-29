@@ -40,7 +40,7 @@
 
 // Prototypes
 
-extern inline uint16_t gsdsp_init_dsp(uint16_t regCORCON);
+extern uint16_t gsdsp_init_dsp(uint16_t regCORCON);
 
 // Global Flags and bit-masks
 
@@ -223,8 +223,8 @@ typedef union {
 
 
 /* PROTOTYPES */
-extern volatile inline uint16_t p33_init_dsp(REGBLK_CORCON_t dsp_cfg);
-extern volatile inline REGBLK_CORCON_t p33SMPS_get_dsp_config(void);
+extern volatile uint16_t p33_init_dsp(REGBLK_CORCON_t dsp_cfg);
+extern volatile REGBLK_CORCON_t p33SMPS_get_dsp_config(void);
 
 #endif /* dsPIC33CH/CK only */
 #endif /* end of __P33EGS_DSP_H__ */ 

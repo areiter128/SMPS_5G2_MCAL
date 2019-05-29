@@ -51,7 +51,7 @@
  * 
  * *****************************************************************************************************/
 
-uint16_t hsadc_module_power_up(void)
+inline volatile uint16_t hsadc_module_power_up(void)
 {
     volatile uint16_t fres=0;
     
@@ -79,7 +79,7 @@ uint16_t hsadc_module_power_up(void)
  * 
  * *****************************************************************************************************/
 
-uint16_t hsadc_module_power_down(void)
+inline volatile uint16_t hsadc_module_power_down(void)
 {
     #if defined (_ADCMD)
     _ADCMD = 1; 		// Turn on power to PWM channel #1
@@ -115,7 +115,7 @@ uint16_t hsadc_module_power_down(void)
  * are set here.
  * ***********************************************************************************************/
 
-uint16_t hsadc_init_adc_module(REGBLK_ADCON1_t cfgADCON1, 
+inline volatile uint16_t hsadc_init_adc_module(REGBLK_ADCON1_t cfgADCON1, 
                         REGBLK_ADCON2_t cfgADCON2, 
                         REGBLK_ADCON3_t cfgADCON3,
                         REGBLK_ADCON4_t cfgADCON4,
@@ -214,7 +214,7 @@ uint16_t hsadc_init_adc_module(REGBLK_ADCON1_t cfgADCON1,
  * dividers are set here.
  * ***********************************************************************************************/
 
-uint16_t hsadc_init_adc_core(uint16_t index, uint16_t regADCORExL, uint16_t regADCORExH)
+inline volatile uint16_t hsadc_init_adc_core(uint16_t index, uint16_t regADCORExL, uint16_t regADCORExH)
 {
 
 volatile uint16_t *regptr;
@@ -288,7 +288,7 @@ volatile uint16_t reg_offset=0;
  * enable-instruction is followed by a short delay loop.
  * ***********************************************************************************************/
 
-uint16_t hsadc_module_enable(void)
+inline volatile uint16_t hsadc_module_enable(void)
 {
 
 	ADCON1Lbits.ADON	= ADC_ON; 	// Enable ADC module
@@ -308,7 +308,7 @@ uint16_t hsadc_module_enable(void)
  * at certain pins will be lost as every pin will be re-configured as GPIO.
  * ***********************************************************************************************/
 
-uint16_t hsadc_module_disable(void)
+inline volatile uint16_t hsadc_module_disable(void)
 {
 
 	ADCON1Lbits.ADON = ADC_OFF;			// Disable ADC module 
@@ -329,7 +329,7 @@ uint16_t hsadc_module_disable(void)
  * become GPIOs.
  * ***********************************************************************************************/
 
-uint16_t hsadc_reset(void)
+inline volatile uint16_t hsadc_reset(void)
 {
 	// Reset all ADC configuration registers to defaults
 
@@ -366,7 +366,7 @@ uint16_t hsadc_reset(void)
  * calibration of the given ADC core.
  * ***********************************************************************************************/
 
-uint16_t hsadc_check_adc_cores_ready(void)
+inline volatile uint16_t hsadc_check_adc_cores_ready(void)
 {
     volatile uint16_t timeout = 0, rdy_compare = 0, reg_buf = 0;
     
@@ -392,7 +392,7 @@ uint16_t hsadc_check_adc_cores_ready(void)
  * calibration of the given ADC core.
  * ***********************************************************************************************/
 #if defined (__P33SMPS_EP__)
-uint16_t hsadc_calibrate_adc_core(uint16_t index, uint16_t calib_mode)
+inline volatile uint16_t hsadc_calibrate_adc_core(uint16_t index, uint16_t calib_mode)
 {
 	volatile uint16_t timeout=0;
     volatile uint16_t *regptr;
@@ -475,7 +475,7 @@ uint16_t hsadc_calibrate_adc_core(uint16_t index, uint16_t calib_mode)
  * calibration of the given ADC core.
  * ***********************************************************************************************/
 
-uint16_t hsadc_power_on_adc_core(uint16_t index)
+inline volatile uint16_t hsadc_power_on_adc_core(uint16_t index)
 {
     volatile uint16_t *regptr;
     volatile uint16_t reg_buf=0;
@@ -540,7 +540,7 @@ uint16_t hsadc_power_on_adc_core(uint16_t index)
  * 
  * ***********************************************************************************************/
 
-uint16_t hsadc_set_adc_input_trigger_source(uint16_t index, uint16_t trigger_source)
+inline volatile uint16_t hsadc_set_adc_input_trigger_source(uint16_t index, uint16_t trigger_source)
 {
 
     volatile uint16_t *regptr;
@@ -591,7 +591,7 @@ uint16_t hsadc_set_adc_input_trigger_source(uint16_t index, uint16_t trigger_sou
  * Those interrupts can be "pulled-in" to compensate the interrupt latency of the controller
  * ***********************************************************************************************/
 
-uint16_t hsadc_set_adc_input_interrupt(uint16_t index, uint16_t interrupt_enable, uint16_t early_interrupt_enable)
+inline volatile uint16_t hsadc_set_adc_input_interrupt(uint16_t index, uint16_t interrupt_enable, uint16_t early_interrupt_enable)
 {
     volatile uint16_t *regptr;
     
@@ -646,7 +646,7 @@ uint16_t hsadc_set_adc_input_interrupt(uint16_t index, uint16_t interrupt_enable
  * This routine allows configuration of the comparator, the input source and its thresholds.
  * ***********************************************************************************************/
 
-uint16_t hsadc_init_adc_comp(uint16_t index, uint16_t input_no, uint16_t regADCMPxCON, uint16_t regADCMPxLO, uint16_t regADCMPxHI)
+inline volatile uint16_t hsadc_init_adc_comp(uint16_t index, uint16_t input_no, uint16_t regADCMPxCON, uint16_t regADCMPxLO, uint16_t regADCMPxHI)
 {
 
 volatile uint16_t *regptr;

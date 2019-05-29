@@ -1033,12 +1033,12 @@ typedef enum {
  *	Prototypes
  * **************************************************************************************/
 
-extern inline int16_t init_FRCOSC(CLKDIV_FRCDIVN_e frc_div, OSCTUN_TUN_e frc_tun);
-extern inline int16_t init_FOSC(OSC_CONFIG_t osc_config);
-extern inline int16_t init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config);
+extern volatile uint16_t init_FRCOSC(CLKDIV_FRCDIVN_e frc_div, OSCTUN_TUN_e frc_tun);
+extern volatile uint16_t init_FOSC(OSC_CONFIG_t osc_config);
+extern volatile uint16_t init_AUXCLK(AUXOSC_CONFIG_t aux_clock_config);
 
-extern inline int16_t init_FRCCLK_Defaults(CPU_SPEED_DEFAULTS_e cpu_speed);
-extern inline int16_t init_AUXCLK_500MHz(void);
+extern volatile uint16_t init_FRCCLK_Defaults(CPU_SPEED_DEFAULTS_e cpu_speed);
+extern volatile uint16_t init_AUXCLK_500MHz(void);
 
 
 #endif  /* __MCAL_P33_SMPS_OSCILLATOR_H__ */

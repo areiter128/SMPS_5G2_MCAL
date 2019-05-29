@@ -52,7 +52,7 @@
  * the bias power to on-chip peripheral blocks. This routine enables the bias power to the high-
  * resolution PWM module.
  * ***********************************************************************************************/
-uint16_t hspwm_power_enable(void) {
+inline volatile uint16_t hspwm_power_enable(void) {
 // enable power to peripheral
     _HSPWM_POWER_ENABLE;
     return(1 - _PWMMD);
@@ -71,7 +71,7 @@ uint16_t hspwm_power_enable(void) {
  * the bias power to on-chip peripheral blocks. This routine disables the bias power to the high-
  * resolution PWM module.
  * ***********************************************************************************************/
-uint16_t hspwm_power_disable(void) {
+inline volatile uint16_t hspwm_power_disable(void) {
 // disable power to peripheral
     _HSPWM_POWER_DISABLE;
     return(1 - _PWMMD);
@@ -91,7 +91,7 @@ uint16_t hspwm_power_disable(void) {
  * needs to be enabled by using the function call "hspwm_enable_pwm".
  * ***********************************************************************************************/
 
-uint16_t hspwm_init_independent_pwm(
+inline volatile uint16_t hspwm_init_independent_pwm(
             uint16_t channel, 
             REGBLK_PCLK_CONFIG_t regPCLK, 
             REGBLK_PGxCH_CONFIG_t regPGxCON, 
@@ -153,7 +153,7 @@ uint16_t hspwm_init_independent_pwm(
  * duty cycle/on-time and phase shift.
  * ***********************************************************************************************/
 
-uint16_t hspwm_init_pwm_timing(uint16_t channel, uint16_t regPGxPER, uint16_t regPGxDC, uint16_t regPGxPHASE)
+inline volatile uint16_t hspwm_init_pwm_timing(uint16_t channel, uint16_t regPGxPER, uint16_t regPGxDC, uint16_t regPGxPHASE)
 {
     
     volatile uint16_t fres=1;
@@ -207,7 +207,7 @@ uint16_t hspwm_init_pwm_timing(uint16_t channel, uint16_t regPGxPER, uint16_t re
  * generator.
  * ***********************************************************************************************/
 
-uint16_t hspwm_enable_pwm(uint16_t channel, bool wait_for_hres)
+inline volatile uint16_t hspwm_enable_pwm(uint16_t channel, bool wait_for_hres)
 {
 
     volatile uint16_t *regptr16;
@@ -256,7 +256,7 @@ uint16_t hspwm_enable_pwm(uint16_t channel, bool wait_for_hres)
  * This function disables a PWM generator defined by parameter CHANNEL.
  * ***********************************************************************************************/
 
-uint16_t hspwm_disable_pwm(uint16_t channel)
+inline volatile uint16_t hspwm_disable_pwm(uint16_t channel)
 {
 
     volatile uint16_t *regptr16;
@@ -271,7 +271,7 @@ uint16_t hspwm_disable_pwm(uint16_t channel)
     return((volatile uint16_t)(volatile bool)(*regptr16 & REG_PGCON_ON_PWM_ENABLED));
 }
 
-uint16_t hspwm_ovr_hold(uint16_t channel)
+inline volatile uint16_t hspwm_ovr_hold(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -286,7 +286,7 @@ uint16_t hspwm_ovr_hold(uint16_t channel)
 }
 
 
-uint16_t hspwm_ovr_release(uint16_t channel)
+inline volatile uint16_t hspwm_ovr_release(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -300,7 +300,7 @@ uint16_t hspwm_ovr_release(uint16_t channel)
     return(1 - (volatile uint16_t)(volatile bool)(*regptr16 & REG_IOCON_OVREN_COMP_SET));
 }
 
-uint16_t hspwm_ovr_release_high_side(uint16_t channel)
+inline volatile uint16_t hspwm_ovr_release_high_side(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -314,7 +314,7 @@ uint16_t hspwm_ovr_release_high_side(uint16_t channel)
     return(1 - (volatile uint16_t)(volatile bool)(*regptr16 & REG_IOCON_OVRENH_ENABLED));
 }
 
-uint16_t hspwm_ovr_release_low_side(uint16_t channel)
+inline volatile uint16_t hspwm_ovr_release_low_side(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -328,7 +328,7 @@ uint16_t hspwm_ovr_release_low_side(uint16_t channel)
     return(1 - (volatile uint16_t)(volatile bool)(*regptr16 & REG_IOCON_OVRENL_ENABLED));
 }
 
-uint16_t hspwm_set_gpio_high_side(uint16_t channel)
+inline volatile uint16_t hspwm_set_gpio_high_side(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -342,7 +342,7 @@ uint16_t hspwm_set_gpio_high_side(uint16_t channel)
     return((volatile uint16_t)(volatile bool)(*regptr16 & REG_IOCON_PENH_GPIO_DISABLE));
 }
 
-uint16_t hspwm_reset_gpio_high_side(uint16_t channel)
+inline volatile uint16_t hspwm_reset_gpio_high_side(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -356,7 +356,7 @@ uint16_t hspwm_reset_gpio_high_side(uint16_t channel)
     return(1 - (volatile uint16_t)(volatile bool)(*regptr16 & REG_IOCON_PENH_GPIO_DISABLE));
 }
 
-uint16_t hspwm_set_gpio_low_side(uint16_t channel)
+inline volatile uint16_t hspwm_set_gpio_low_side(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;
@@ -371,7 +371,7 @@ uint16_t hspwm_set_gpio_low_side(uint16_t channel)
 }
 
 
-uint16_t hspwm_reset_gpio_low_side(uint16_t channel)
+inline volatile uint16_t hspwm_reset_gpio_low_side(uint16_t channel)
 {
     volatile uint16_t *regptr16;
     volatile uint16_t reg_offset;

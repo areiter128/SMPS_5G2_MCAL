@@ -42,26 +42,27 @@
  * dsPIC33F Reference Manual, Section 10: I/O Ports, Chapter 10.3: Peripheral Multiplexing
  *
  * Author:	Andreas Reiter, Microchip Technology
- * Version: 1.2
+ * Version: 1.3
  *
  * History:
  *	11/04/2008	First Release
  *  08/25/2009	Added definitions for new peripherals
  *  02/05/2012	Format transfer
- *  04/11/1016	Added definitions and compile switches for dsPIC33EP GS
- *
+ *  04/11/2016	Added definitions and compile switches for dsPIC33EP GS
+ *  05/29/2019  Added RPx pin configuration lock/unlock sequence for dsPIC33C
  * ***********************************************************************************************/
 
 /*@@pps_LockIO
  * ************************************************************************************************
  * Summary:
- * Locks the Peripheral Pin Select Configuration registers against accidential changes
+ * Locks the Peripheral Pin Select Configuration registers against accidental changes
  *
  * Parameters:
  *	(none)
  *
  * Returns:
- *	(none)
+ *	1: Success
+ *	0: Error
  *
  * Description:
  * This inline-assembly routine locks the Port Multiplexing Configuration registers by keeping
@@ -77,8 +78,10 @@
  *	p33EGS_pps.h, FOSC, IOL1WAY, IOL1WAY_ON, IOL1WAY_OFF; pps_UnlockIO
  * 
  * ***********************************************************************************************/
-void pps_LockIO(void){
+inline volatile uint16_t pps_LockIO(void){
 
+#if defined (__P33SMPS_FJ__) || defined (__P33SMPS_EP__)
+    // IOLOCK sequence is performed on OCCON register
 	asm volatile
 	(	"nop \n"
 		"disi #7 \n"
@@ -91,6 +94,28 @@ void pps_LockIO(void){
 		"disi #0 \n"			// see errata
 		"nop \n"
 	);
+    
+    return(OSCCONbits.IOLOCK);
+    
+#elif defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
+    // IOLOCK sequence is performed on NVMKEY register
+	asm volatile
+	(	"push.s \n"
+		"disi #5 \n"
+		"mov #0x55,w1 \n"
+		"mov #0xAA, w2 \n"
+		"mov w1, _NVMKEY \n"
+		"mov w2, _NVMKEY \n"
+		"bset _RPCON, #11 \n"
+		"disi #0 \n"			// see errata
+		"nop \n"
+		"nop \n"
+        "pop.s \n"
+	);
+    
+    return(RPCONbits.IOLOCK);
+#endif
+    
 }
 
 /*@@pps_UnlockIO
@@ -102,7 +127,8 @@ void pps_LockIO(void){
  *	(none)
  *
  * Returns:
- *	(none)
+ *	1: Success
+ *	0: Error
  *
  * Description:
  * This inline-assembly routine unlocks the Port Multiplexing Configuration registers by keeping
@@ -117,8 +143,10 @@ void pps_LockIO(void){
  *	pps.h, FOSC, IOL1WAY, IOL1WAY_ON, IOL1WAY_OFF, pps_LockIO
  * 
  * ***********************************************************************************************/
-void pps_UnlockIO(void){
+inline volatile uint16_t pps_UnlockIO(void){
 
+#if defined (__P33SMPS_FJ__) || defined (__P33SMPS_EP__)
+    // IOLOCK sequence is performed on OCCON register only
 	asm volatile
 	(	"nop \n"
 		"disi #7 \n"
@@ -131,6 +159,28 @@ void pps_UnlockIO(void){
 		"disi #0 \n"			// see errata
 		"nop \n"
 	);
+    
+    return(1 - OSCCONbits.IOLOCK);
+    
+#elif defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
+    // IOLOCK sequence is performed on RPCON using NVMKEY register to unlock
+	asm volatile
+	(	"push.s \n"
+		"disi #5 \n"
+		"mov #0x55,w1 \n"
+		"mov #0xAA, w2 \n"
+		"mov w1, _NVMKEY \n"
+		"mov w2, _NVMKEY \n"
+		"bclr _RPCON, #11 \n"
+		"disi #0 \n"			// see errata
+		"nop \n"
+		"nop \n"
+        "pop.s \n"
+	);
+    
+    return(1 - RPCONbits.IOLOCK);
+#endif
+    
 }
 
 /*@@pps_RemapOutput
@@ -160,7 +210,7 @@ void pps_UnlockIO(void){
  *  pps_UnmapOutput, pps_UnmapInput
  * 
  * ***********************************************************************************************/
-uint16_t pps_RemapOutput(uint8_t pinno, uint8_t peripheral){
+inline volatile uint16_t pps_RemapOutput(uint8_t pinno, uint8_t peripheral){
 	
     volatile uint8_t *regptr;
 
@@ -202,7 +252,7 @@ uint16_t pps_RemapOutput(uint8_t pinno, uint8_t peripheral){
  *  pps_UnmapInput, pps_UnmapOutput
  * 
  * ***********************************************************************************************/
-uint16_t pps_RemapInput(uint8_t pinno, uint8_t *peripheral)
+inline volatile uint16_t pps_RemapInput(uint8_t pinno, uint8_t *peripheral)
 {
 	// Map selected pin function
     *peripheral = pinno;
@@ -237,7 +287,7 @@ uint16_t pps_RemapInput(uint8_t pinno, uint8_t *peripheral)
  *  pps_RemapOutput, pps_UnmapInput
  * 
  * ***********************************************************************************************/
-uint16_t pps_UnmapOutput(uint8_t pinno)
+inline volatile uint16_t pps_UnmapOutput(uint8_t pinno)
 {
     volatile uint16_t fres=0;
 
@@ -273,7 +323,7 @@ uint16_t pps_UnmapOutput(uint8_t pinno)
  *  pps_RemapOutput, pps_UnmapOutput
  * 
  * ***********************************************************************************************/
-uint16_t pps_UnmapInput(uint8_t *peripheral)
+inline volatile uint16_t pps_UnmapInput(uint8_t *peripheral)
 {
     volatile uint16_t fres=0;
 

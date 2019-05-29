@@ -98,70 +98,70 @@ ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o: plibs/dsPIC33C/p33SMPS_dsp.c  nbproje
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_dsp.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_dsp.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o: plibs/dsPIC33C/p33SMPS_hsadc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hsadc.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hsadc.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o: plibs/dsPIC33C/p33SMPS_hspwm_c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hspwm_c.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hspwm_c.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o: plibs/dsPIC33C/p33SMPS_oscillator.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_oscillator.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_oscillator.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o: plibs/dsPIC33C/p33SMPS_timer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_timer.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_timer.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o: plibs/dsPIC33C/p33SMPS_pmd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pmd.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pmd.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o: plibs/dsPIC33C/p33SMPS_pps.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pps.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pps.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o: plibs/dsPIC33C/p33SMPS_irq.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_irq.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_irq.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o: plibs/dsPIC33C/p33SMPS_gpio.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_gpio.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_gpio.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o: plibs/dsPIC33C/p33SMPS_mailboxes.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_mailboxes.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_mailboxes.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d"      -g -D__DEBUG -D__MPLAB_DEBUGGER_REAL_ICE=1  -mno-eds-warn  -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 else
@@ -169,70 +169,70 @@ ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o: plibs/dsPIC33C/p33SMPS_dsp.c  nbproje
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_dsp.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_dsp.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_dsp.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o: plibs/dsPIC33C/p33SMPS_hsadc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hsadc.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hsadc.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hsadc.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o: plibs/dsPIC33C/p33SMPS_hspwm_c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hspwm_c.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_hspwm_c.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_hspwm_c.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o: plibs/dsPIC33C/p33SMPS_oscillator.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_oscillator.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_oscillator.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_oscillator.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o: plibs/dsPIC33C/p33SMPS_timer.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_timer.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_timer.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_timer.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o: plibs/dsPIC33C/p33SMPS_pmd.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pmd.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pmd.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pmd.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o: plibs/dsPIC33C/p33SMPS_pps.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pps.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_pps.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_pps.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o: plibs/dsPIC33C/p33SMPS_irq.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_irq.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_irq.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_irq.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o: plibs/dsPIC33C/p33SMPS_gpio.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_gpio.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_gpio.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_gpio.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o: plibs/dsPIC33C/p33SMPS_mailboxes.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}/plibs/dsPIC33C" 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d 
 	@${RM} ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o 
-	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_mailboxes.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -O3 -msmart-io=1 -Wall -msfr-warn=off  
+	${MP_CC} $(MP_EXTRA_CC_PRE)  plibs/dsPIC33C/p33SMPS_mailboxes.c  -o ${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o  -c -mcpu=$(MP_PROCESSOR_OPTION)  -MMD -MF "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d"      -mno-eds-warn  -g -omf=elf -DXPRJ___P33SMPS_CK__=$(CND_CONF)  -legacy-libc  $(COMPARISON_BUILD)  -std=gnu99 -finline-functions -O3 -msmart-io=1 -Wall -msfr-warn=off  
 	@${FIXDEPS} "${OBJECTDIR}/plibs/dsPIC33C/p33SMPS_mailboxes.o.d" $(SILENT)  -rsi ${MP_CC_DIR}../ 
 	
 endif
