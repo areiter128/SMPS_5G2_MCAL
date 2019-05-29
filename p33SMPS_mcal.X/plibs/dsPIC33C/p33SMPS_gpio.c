@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/* @@p33SMPS_gpio.c
+/*!p33SMPS_gpio.c
  * ***************************************************************************
  *
  * File:   p33SMPS_gpio.c
@@ -31,7 +31,11 @@
 
 #include "p33SMPS_gpio.h"
 
+<<<<<<< HEAD
 inline volatile uint16_t gpio_reset(void) {
+=======
+volatile uint16_t gpio_reset(void) {
+>>>>>>> 5e6561fd5570e489217cc7b6dc9f5da321f4c945
 
     /* Reset all device pins to digital function */
     #ifdef ANSELA

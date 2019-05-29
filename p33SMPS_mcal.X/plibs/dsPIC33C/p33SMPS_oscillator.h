@@ -19,7 +19,7 @@
  * MICROCHIP PROVIDES THIS SOFTWARE CONDITIONALLY UPON YOUR ACCEPTANCE OF THESE 
  * TERMS. 
  * ***************************************************************************/
-/* @@p33SMPS_oscillator.h
+/*!p33SMPS_oscillator.h
  * ***************************************************************************
  *
  * File:    p33SMPS_oscillator.h
