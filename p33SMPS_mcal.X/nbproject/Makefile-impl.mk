@@ -27,11 +27,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=p33SMPS_mcal.X
 
 # Active Configuration
-<<<<<<< HEAD
-DEFAULTCONF=__P33SMPS_CH_SLV__
-=======
 DEFAULTCONF=__P33SMPS_CK__
->>>>>>> develop
 CONF=${DEFAULTCONF}
 
 # All Configurations
