@@ -31,7 +31,7 @@
 #if defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
 
 
-/*@@p33SMPS_hsadc.h
+/*!p33SMPS_hsadc.h
  * ************************************************************************************************
  * Summary:
  * Header file with additional defines for the dsPIC33FxxGS-ADC SFRs

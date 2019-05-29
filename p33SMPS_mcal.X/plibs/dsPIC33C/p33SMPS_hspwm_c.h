@@ -29,7 +29,7 @@
 
 #include "../p33SMPS_devices.h"
 
-/*@@p33MP_hspwm.h
+/*!p33MP_hspwm.h
  * ************************************************************************************************
  * Summary:
  * Header file with additional defines for the dsPIC33CH/CKxxMP-PWM SFRs

@@ -28,7 +28,7 @@
 #include "p33SMPS_dsp.h"
 
 
-/*@@p33SMPS_dsp.c
+/*!p33SMPS_dsp.c
  * ************************************************************************************************
  * Summary:
  * Driver file for the dsPIC33E and dsPIC33C DSP Configuration SFRs
@@ -39,7 +39,7 @@
  * ***********************************************************************************************/
 
 
-/*@@p33SMPS_init_dsp()
+/*!p33SMPS_init_dsp()
  * *****************************************************************************************************
  * Summary:
  * Initializes the DSP engine in accordance to user settings 
@@ -66,7 +66,7 @@ inline volatile uint16_t p33_init_dsp(REGBLK_CORCON_t dsp_cfg)
 } 
 
 
-/*@@p33SMPS_get_dsp_config()
+/*!p33SMPS_get_dsp_config()
  * *****************************************************************************************************
  * Summary:
  * Reads the DSP engine configuration 

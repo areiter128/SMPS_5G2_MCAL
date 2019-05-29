@@ -43,7 +43,7 @@
 #include "../p33SMPS_devices.h"
 
 
-/*@@System Frequencies
+/*!System Frequencies
  * ************************************************************************************************
  * Summary:
  * Set of values and macros for system frequency adaption

@@ -1,4 +1,4 @@
-/*@@Software License Agreement
+/*!Software License Agreement
  * ************************************************************************************************
  *
  * Software License Agreement
@@ -21,7 +21,7 @@
  * THIRD PARTIES (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
  *
  * ***********************************************************************************************/
-/*@@pps.h
+/*!pps.h
  * ************************************************************************************************
  * Summary:
  * Generic Peripheral Pin Select (PPS) Driver Module (header file)

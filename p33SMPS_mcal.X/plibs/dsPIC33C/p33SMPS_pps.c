@@ -1,4 +1,4 @@
-/*@@Software License Agreement
+/*!Software License Agreement
  * ************************************************************************************************
  *
  * Software License Agreement
@@ -24,7 +24,7 @@
 
 #include "p33SMPS_pps.h"
 
-/*@@p33GS_pps.c
+/*!p33GS_pps.c
  * ************************************************************************************************
  * Summary:
  * Generic Peripheral Pin Select (PPS) Driver Module
@@ -52,7 +52,7 @@
  *  05/29/2019  Added RPx pin configuration lock/unlock sequence for dsPIC33C
  * ***********************************************************************************************/
 
-/*@@pps_LockIO
+/*!pps_LockIO
  * ************************************************************************************************
  * Summary:
  * Locks the Peripheral Pin Select Configuration registers against accidental changes
@@ -118,7 +118,7 @@ inline volatile uint16_t pps_LockIO(void){
     
 }
 
-/*@@pps_UnlockIO
+/*!pps_UnlockIO
  * ************************************************************************************************
  * Summary:
  * Unlocks the Peripheral Pin Select Configuration registers to enable changes
@@ -183,7 +183,7 @@ inline volatile uint16_t pps_UnlockIO(void){
     
 }
 
-/*@@pps_RemapOutput
+/*!pps_RemapOutput
  * ************************************************************************************************
  * Summary:
  * Assigns a digital function output to a pin
@@ -225,7 +225,7 @@ inline volatile uint16_t pps_RemapOutput(uint8_t pinno, uint8_t peripheral){
 
 }
 
-/*@@pps_RemapInput
+/*!pps_RemapInput
  * ************************************************************************************************
  * Summary:
  * Assigns a pin to a digital function input
@@ -261,7 +261,7 @@ inline volatile uint16_t pps_RemapInput(uint8_t pinno, uint8_t *peripheral)
   
 }
 
-/*@@pps_UnmapOutput
+/*!pps_UnmapOutput
  * ************************************************************************************************
  * Summary:
  * Disconnects a pin from a digital function output
@@ -297,7 +297,7 @@ inline volatile uint16_t pps_UnmapOutput(uint8_t pinno)
 
 }
 
-/*@@pps_UnmapInput
+/*!pps_UnmapInput
  * ************************************************************************************************
  * Summary:
  * Disconnects a pin from a digital function input
