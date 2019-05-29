@@ -29,6 +29,7 @@ disassembly/
 *.bash
 Makefile-genesis.properties
 Makefile-impl.mk
+Makefile-variables.mk
 
 # KDE specific
 .directory
