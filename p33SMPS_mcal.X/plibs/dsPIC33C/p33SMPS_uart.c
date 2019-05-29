@@ -70,7 +70,7 @@
  * port is opened to ensure the baudrate settings and hardware flow control is applied properly.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_init(uint16_t index, UxMODE_CONTROL_REGISTER_t regUxMODE, UxSTA_CONTROL_REGISTER_t regUxSTA)
+inline volatile uint16_t smps_uart_init(uint16_t index, UxMODE_CONTROL_REGISTER_t regUxMODE, UxSTA_CONTROL_REGISTER_t regUxSTA)
 {
 
     volatile uint16_t *regptr;
@@ -109,7 +109,7 @@ uint16_t smps_uart_init(uint16_t index, UxMODE_CONTROL_REGISTER_t regUxMODE, UxS
  * initialization and has to be enabled by the user.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_open_port(uint16_t index, 
+inline volatile uint16_t smps_uart_open_port(uint16_t index, 
     UART_BAUDRATE_SETTING_e baud, UART_DATA_BIT_SETTING_e data_bits, UART_PARITY_SETTING_e parity, UART_STOP_BIT_SETTING_e stop_bits, 
     UART_ISR_PRIORITY_e isr_priority)
 {
@@ -292,7 +292,7 @@ uint16_t smps_uart_open_port(uint16_t index,
  * This routine is reading one byte from the selected UART receive buffer
  * ***********************************************************************************************/
 
-uint8_t smps_uart_read(volatile uint16_t index)
+inline volatile uint8_t smps_uart_read(volatile uint16_t index)
 {
 
     volatile uint16_t *regptr;
@@ -331,7 +331,7 @@ uint8_t smps_uart_read(volatile uint16_t index)
  * This routine is writing one byte to the selected UART transmit buffer
  * ***********************************************************************************************/
 
-uint16_t smps_uart_write(uint16_t index, uint8_t txData)
+inline volatile uint16_t smps_uart_write(uint16_t index, uint8_t txData)
 {
 
     volatile uint16_t *regptr;
@@ -371,7 +371,7 @@ uint16_t smps_uart_write(uint16_t index, uint8_t txData)
  * This routine is reading the status information form the status register of the selected UART 
  * ***********************************************************************************************/
 
-uint16_t smps_uart_get_status(volatile uint16_t index)
+inline volatile uint16_t smps_uart_get_status(volatile uint16_t index)
 {
     
     volatile uint16_t *regptr;
@@ -406,7 +406,7 @@ uint16_t smps_uart_get_status(volatile uint16_t index)
  * This routine is enabling the selected UART as it was configured previously.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_enable(uint16_t index)
+inline volatile uint16_t smps_uart_enable(uint16_t index)
 {
 
     volatile uint16_t *regptr;
@@ -436,7 +436,7 @@ uint16_t smps_uart_enable(uint16_t index)
  * This routine is disabling the selected UART as it was configured previously.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_disable(uint16_t index)
+inline volatile uint16_t smps_uart_disable(uint16_t index)
 {
 
     volatile uint16_t *regptr;
@@ -467,7 +467,7 @@ uint16_t smps_uart_disable(uint16_t index)
  * This routine is disabling the selected UART and resets its entire configuration.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_dispose(uint16_t index)
+inline volatile uint16_t smps_uart_dispose(uint16_t index)
 {
 	
     volatile uint16_t *regptr;
@@ -499,7 +499,7 @@ uint16_t smps_uart_dispose(uint16_t index)
  * This routine is enabling the power supply to the user-defined UART module.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_power_on(uint16_t index)
+inline volatile uint16_t smps_uart_power_on(uint16_t index)
 {
 
 	if (index > UART_UART_COUNT) return(0); // Skip if index is out of range
@@ -535,7 +535,7 @@ uint16_t smps_uart_power_on(uint16_t index)
  * This routine is disabling the power supply to the user-defined UART module.
  * ***********************************************************************************************/
 
-uint16_t smps_uart_power_off(uint16_t index)
+inline volatile uint16_t smps_uart_power_off(uint16_t index)
 {
 
 	if (index > UART_UART_COUNT) return(0); // Skip if index is out of range

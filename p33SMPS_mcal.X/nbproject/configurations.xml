@@ -215,6 +215,7 @@
         <property key="preserve-file" value=""/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <appendMe value="-std=gnu99 -finline-functions"/>
       </C30Global>
       <RealICEPlatformTool>
         <property key="ADC" value="true"/>
@@ -869,6 +870,7 @@
         <property key="preserve-file" value=""/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <appendMe value="-std=gnu99 -finline-functions"/>
       </C30Global>
       <RealICEPlatformTool>
         <property key="ADC" value="true"/>
@@ -1366,7 +1368,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.40</languageToolchainVersion>
+        <languageToolchainVersion>1.36</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -1517,6 +1519,7 @@
         <property key="preserve-file" value=""/>
         <property key="relaxed-math" value="false"/>
         <property key="save-temps" value="false"/>
+        <appendMe value="-std=gnu99 -finline-functions"/>
       </C30Global>
       <RealICEPlatformTool>
         <property key="ADC" value="true"/>

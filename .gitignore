@@ -16,6 +16,10 @@
 
 # Netbeans specific
 ~*.*
+nbproject/build/
+nbproject/dist/
+nbproject/private/
+nbproject/disassembly/
 build/
 dist/
 private/
@@ -24,6 +28,7 @@ disassembly/
 *.mk
 *.bash
 Makefile-genesis.properties
+Makefile-impl.mk
 
 # KDE specific
 .directory
