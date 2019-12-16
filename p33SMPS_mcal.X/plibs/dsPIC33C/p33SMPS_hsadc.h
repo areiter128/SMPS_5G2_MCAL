@@ -104,6 +104,9 @@
         #define ADC_ANINPUT_COUNT       16                  // Number of analog inputs
         #define ADC_SHARED_CORE_INDEX   (ADC_CORE_COUNT - 1)    // Arteficially assigned index for shared ADC core
 
+        #define ADC_ADCMP_COUNT         4 // Number of ADC Digital Comparators
+        #define ADC_ADFL_COUNT          4 // Number of ADC Digital Filters
+
         #define REG_ADC_CHANNEL_L_MSK   0b1111111111111111
         #define REG_ADC_CHANNEL_H_MSK   0b0000000000000000
     
@@ -4567,7 +4570,9 @@ typedef union {
 // ==============================================================================================
  typedef struct {
     volatile ADCOREx_SAMC_e samc;       // Shared/Dedicated ADC Core Conversion Delay Selection bits
+    #ifdef ADCON4_SAMCxEN_e
     volatile ADCON4_SAMCxEN_e samc_en;  // Flag indicating if sample delay should be enabled/disabled
+    #endif
     volatile ADCOREx_EISEL_e eisel;     // ADC Core x Early Interrupt Time Selection bits
     volatile ADCOREx_ADCS_e adcs;       // Shared ADC Core Input Clock Divider bits
     volatile ADCOREx_RES_e res;         // ADC Core x Resolution Selection bits
