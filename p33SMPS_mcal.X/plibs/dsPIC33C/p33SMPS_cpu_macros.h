@@ -53,9 +53,9 @@
  *      uint16_t:   Previous Working Register Set (Origin)
  * 
  * ********************************************************************************/
-#define ALTWREG_SWAP(x) __extension__ ({ \
-    volatile uint16_t __x = (x), __v; \
-    __asm__ ("ctxtswp %1;\n\t" : "=d" (__v) : "d" (__x)); __v; \
+#define ALTWREG_SWAP(NEW_WREG_SET) __extension__ ({ \
+    volatile uint16_t __new_wreg_set = (NEW_WREG_SET), __old_wreg_set; \
+    __asm__ ("ctxtswp %1;\n\t" : "=d" (__old_wreg_set) : "d" (__new_wreg_set)); __old_wreg_set; \
 })    
 
 
