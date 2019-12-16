@@ -1598,7 +1598,7 @@
         <property key="memories.programmemory.ranges" value="0-2beff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="D:/Firmware/Debug-UART Protocol/plib/p33SMPS_mcal.X/debug/__P33SMPS_CK__/p33SMPS_mcal_ptg"/>
+                  value="D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/debug/__P33SMPS_CK__/p33SMPS_mcal_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>
