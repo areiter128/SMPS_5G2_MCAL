@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="12">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="13">
         <file>
             <url>plibs/dsPIC33C/p33SMPS_hsadc.c</url>
             <bookmark id="4">
@@ -13,7 +13,7 @@
             <url>plibs/dsPIC33C/p33SMPS_hsadc.h</url>
             <bookmark id="9">
                 <name/>
-                <line>4657</line>
+                <line>4658</line>
                 <key/>
             </bookmark>
             <bookmark id="7">
@@ -26,7 +26,12 @@
             <url>plibs/dsPIC33C/p33SMPS_uart.c</url>
             <bookmark id="2">
                 <name/>
-                <line>174</line>
+                <line>209</line>
+                <key/>
+            </bookmark>
+            <bookmark id="13">
+                <name/>
+                <line>585</line>
                 <key/>
             </bookmark>
         </file>
@@ -35,6 +40,12 @@
         <group name="frmwrk4">
             <file>file:/C:/_dsmps/FRMWRK4/template/firmware/plib/p33SMPS_mcal.X/nbproject/Makefile-__P33SMPS_CH_SLV__.mk</file>
         </group>
-        <group/>
+        <group>
+            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_cpu_macros.h</file>
+            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_irq.h</file>
+            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_irq.c</file>
+            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_hsadc.h</file>
+            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_hsadc.c</file>
+        </group>
     </open-files>
 </project-private>
