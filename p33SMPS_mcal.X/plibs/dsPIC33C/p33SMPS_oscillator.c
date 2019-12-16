@@ -475,12 +475,14 @@ volatile uint16_t smpsOSC_GetFrequencies(volatile uint32_t pri_osc_frequency) {
         
         freq = (volatile int32_t)OSC_FRC_FREQ;   // Oscillator frequency is 8 MHz
         
+        #if defined (__P33SMPS_CK__) || defined (__P33SMPS_CH_MSTR__)
         // FRC tuning register does not affect Backup FRC clock
         if(otype != OSCCON_xOSC_BFRC) {
             freq += OSC_TUN_STEP_FREQUENCY * (volatile int32_t)(OSCTUNbits.TUN); // Add oscillator tuning value (is singed)
             system_frequencies.frc = freq;    // Copy updated fast RC oscillator frequency after tuning
         }
-
+        #endif
+        
         // Including FRC divider requires the FRCDIV oscillator to be selected
         if (otype == OSCCON_xOSC_FRCDIVN) {        // If oscillator is using internal divider...
             vbuf = (CLKDIVbits.FRCDIV & 0x0003);    // Copy divider SFR bits

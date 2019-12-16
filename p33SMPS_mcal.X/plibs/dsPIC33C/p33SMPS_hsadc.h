@@ -113,6 +113,9 @@
         #define ADC_ANINPUT_COUNT       18                  // Number of analog inputs
         #define ADC_SHARED_CORE_INDEX   (ADC_CORE_COUNT - 1)    // Arteficially assigned index for shared ADC core
 
+        #define ADC_ADCMP_COUNT         4 // Number of ADC Digital Comparators
+        #define ADC_ADFL_COUNT          4 // Number of ADC Digital Filters
+
         #define REG_ADC_CHANNEL_L_MSK   0b1111111111111111
         #define REG_ADC_CHANNEL_H_MSK   0b0000000000000011
 
