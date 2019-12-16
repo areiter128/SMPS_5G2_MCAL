@@ -2048,36 +2048,36 @@ typedef union {
     #define REG_ADCON4H_VALID_DATA_WRITE_MSK    0b0000000011111111	// Bit mask used to set unimplemented bits to zero
     #define REG_ADCON4H_VALID_DATA_READ_MSK     0b0000000011111111	// Bit mask used to set unimplemented bits to zero
 
-    #define REG_SYNCTRGSHR_SYNC_TO_SOURCE   0b0100000000000000      // Shared Core synchronized to source clock
-    #define REG_SYNCTRGSHR_INDEPENDENT      0b0000000000000000      // Shared Core not synchronized to source clock
+    #define REG_SYNCTRGSHR_SYNC_TO_SOURCE       0b0100000000000000  // Shared Core synchronized to source clock
+    #define REG_SYNCTRGSHR_INDEPENDENT          0b0000000000000000  // Shared Core not synchronized to source clock
 
     #if (ADC_CORE_COUNT > 7)
-        #define REG_SYNCTRG6_SYNC_TO_SOURCE     0b0100000000000000      // Dedicated Core #6 synchronized to source clock
-        #define REG_SYNCTRG6_INDEPENDENT        0b0000000000000000      // Dedicated Core #6 not synchronized to source clock
+        #define REG_SYNCTRG6_SYNC_TO_SOURCE     0b0100000000000000  // Dedicated Core #6 synchronized to source clock
+        #define REG_SYNCTRG6_INDEPENDENT        0b0000000000000000  // Dedicated Core #6 not synchronized to source clock
     #endif
     #if (ADC_CORE_COUNT > 6)
-        #define REG_SYNCTRG5_SYNC_TO_SOURCE     0b0010000000000000      // Dedicated Core #5 synchronized to source clock
-        #define REG_SYNCTRG5_INDEPENDENT        0b0000000000000000      // Dedicated Core #5 not synchronized to source clock
+        #define REG_SYNCTRG5_SYNC_TO_SOURCE     0b0010000000000000  // Dedicated Core #5 synchronized to source clock
+        #define REG_SYNCTRG5_INDEPENDENT        0b0000000000000000  // Dedicated Core #5 not synchronized to source clock
     #endif
     #if (ADC_CORE_COUNT > 5)
-        #define REG_SYNCTRG4_SYNC_TO_SOURCE     0b0001000000000000      // Dedicated Core #4 synchronized to source clock
-        #define REG_SYNCTRG4_INDEPENDENT        0b0000000000000000      // Dedicated Core #4 not synchronized to source clock
+        #define REG_SYNCTRG4_SYNC_TO_SOURCE     0b0001000000000000  // Dedicated Core #4 synchronized to source clock
+        #define REG_SYNCTRG4_INDEPENDENT        0b0000000000000000  // Dedicated Core #4 not synchronized to source clock
     #endif
     #if (ADC_CORE_COUNT > 4)
-        #define REG_SYNCTRG3_SYNC_TO_SOURCE     0b0000100000000000      // Dedicated Core #3 synchronized to source clock
-        #define REG_SYNCTRG3_INDEPENDENT        0b0000000000000000      // Dedicated Core #3 not synchronized to source clock
+        #define REG_SYNCTRG3_SYNC_TO_SOURCE     0b0000100000000000  // Dedicated Core #3 synchronized to source clock
+        #define REG_SYNCTRG3_INDEPENDENT        0b0000000000000000  // Dedicated Core #3 not synchronized to source clock
     #endif
     #if (ADC_CORE_COUNT > 3)
-        #define REG_SYNCTRG2_SYNC_TO_SOURCE     0b0000010000000000      // Dedicated Core #2 synchronized to source clock
-        #define REG_SYNCTRG2_INDEPENDENT        0b0000000000000000      // Dedicated Core #2 not synchronized to source clock
+        #define REG_SYNCTRG2_SYNC_TO_SOURCE     0b0000010000000000  // Dedicated Core #2 synchronized to source clock
+        #define REG_SYNCTRG2_INDEPENDENT        0b0000000000000000  // Dedicated Core #2 not synchronized to source clock
     #endif
     #if (ADC_CORE_COUNT > 2)
-        #define REG_SYNCTRG1_SYNC_TO_SOURCE     0b0000001000000000      // Dedicated Core #1 synchronized to source clock
-        #define REG_SYNCTRG1_INDEPENDENT        0b0000000000000000      // Dedicated Core #1 not synchronized to source clock
+        #define REG_SYNCTRG1_SYNC_TO_SOURCE     0b0000001000000000  // Dedicated Core #1 synchronized to source clock
+        #define REG_SYNCTRG1_INDEPENDENT        0b0000000000000000  // Dedicated Core #1 not synchronized to source clock
     #endif
     #if (ADC_CORE_COUNT > 1)
-        #define REG_SYNCTRG0_SYNC_TO_SOURCE     0b0000000100000000      // Dedicated Core #0 synchronized to source clock
-        #define REG_SYNCTRG0_INDEPENDENT        0b0000000000000000      // Dedicated Core #0 not synchronized to source clock
+        #define REG_SYNCTRG0_SYNC_TO_SOURCE     0b0000000100000000  // Dedicated Core #0 synchronized to source clock
+        #define REG_SYNCTRG0_INDEPENDENT        0b0000000000000000  // Dedicated Core #0 not synchronized to source clock
     #endif
 
     typedef enum {
@@ -2086,32 +2086,32 @@ typedef union {
     } ADCON4_SYNCTRGx_e; // ADC core clock synchronization
 
     #if (ADC_CORE_COUNT > 7)
-        #define REG_SAMC6EN_ENABLED            0b0000100000000000      // Core #6 synchronized to source clock
-        #define REG_SAMC6EN_DISABLED           0b0000000000000000      // Core #6 not synchronized to source clock
-    #endif
-    #if (ADC_CORE_COUNT > 6)
-        #define REG_SAMC5EN_ENABLED            0b0000100000000000      // Core #5 synchronized to source clock
-        #define REG_SAMC5EN_DISABLED           0b0000000000000000      // Core #5 not synchronized to source clock
-    #endif
-    #if (ADC_CORE_COUNT > 5)
-        #define REG_SAMC4EN_ENABLED            0b0000100000000000      // Core #4 synchronized to source clock
-        #define REG_SAMC4EN_DISABLED           0b0000000000000000      // Core #4 not synchronized to source clock
-    #endif
-    #if (ADC_CORE_COUNT > 4)
-        #define REG_SAMC3EN_ENABLED            0b0000100000000000      // Core #3 synchronized to source clock
-        #define REG_SAMC3EN_DISABLED           0b0000000000000000      // Core #3 not synchronized to source clock
-    #endif
-    #if (ADC_CORE_COUNT > 3)
-        #define REG_SAMC2EN_ENABLED            0b0000010000000000      // Core #2 synchronized to source clock
-        #define REG_SAMC2EN_DISABLED           0b0000000000000000      // Core #2 not synchronized to source clock
-    #endif
-    #if (ADC_CORE_COUNT > 2)
-        #define REG_SAMC1EN_ENABLED            0b0000001000000000      // Core #1 synchronized to source clock
-        #define REG_SAMC1EN_DISABLED           0b0000000000000000      // Core #1 not synchronized to source clock
-    #endif
-    #if (ADC_CORE_COUNT > 1)
-        #define REG_SAMC0EN_ENABLED            0b0000000100000000      // Core #0 synchronized to source clock
-        #define REG_SAMC0EN_DISABLED           0b0000000000000000      // Core #0 not synchronized to source clock
+        #define REG_SAMC6EN_ENABLED             0b0000100000000000  // Core #6 synchronized to source clock
+        #define REG_SAMC6EN_DISABLED            0b0000000000000000  // Core #6 not synchronized to source clock
+    #endif 
+    #if (ADC_CORE_COUNT > 6) 
+        #define REG_SAMC5EN_ENABLED             0b0000100000000000  // Core #5 synchronized to source clock
+        #define REG_SAMC5EN_DISABLED            0b0000000000000000  // Core #5 not synchronized to source clock
+    #endif 
+    #if (ADC_CORE_COUNT > 5) 
+        #define REG_SAMC4EN_ENABLED             0b0000100000000000  // Core #4 synchronized to source clock
+        #define REG_SAMC4EN_DISABLED            0b0000000000000000  // Core #4 not synchronized to source clock
+    #endif 
+    #if (ADC_CORE_COUNT > 4) 
+        #define REG_SAMC3EN_ENABLED             0b0000100000000000  // Core #3 synchronized to source clock
+        #define REG_SAMC3EN_DISABLED            0b0000000000000000  // Core #3 not synchronized to source clock
+    #endif 
+    #if (ADC_CORE_COUNT > 3) 
+        #define REG_SAMC2EN_ENABLED             0b0000010000000000  // Core #2 synchronized to source clock
+        #define REG_SAMC2EN_DISABLED            0b0000000000000000  // Core #2 not synchronized to source clock
+    #endif 
+    #if (ADC_CORE_COUNT > 2) 
+        #define REG_SAMC1EN_ENABLED             0b0000001000000000  // Core #1 synchronized to source clock
+        #define REG_SAMC1EN_DISABLED            0b0000000000000000  // Core #1 not synchronized to source clock
+    #endif 
+    #if (ADC_CORE_COUNT > 1) 
+        #define REG_SAMC0EN_ENABLED             0b0000000100000000  // Core #0 synchronized to source clock
+        #define REG_SAMC0EN_DISABLED            0b0000000000000000  // Core #0 not synchronized to source clock
     #endif
 
     typedef enum {
@@ -2354,7 +2354,7 @@ typedef union {
     // this dummy-memory space will fill the gap when a device doesn't have dedicated ADc cores
     // and therefore related registers are not implemented
     typedef struct {
-        volatile unsigned : 32; // (reserved)
+        volatile uint32_t : 32; // (reserved)
     } __attribute__((packed)) ADCON4_t;
 
 #endif // end of ADCON4 defines, whcih are only available if dedicated ADC cores are present
