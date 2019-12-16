@@ -30,8 +30,8 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef __MCAL_P33_SMPS_GPIO_H__
-#define	__MCAL_P33_SMPS_GPIO_H__
+#ifndef MCAL_P33SMPS_GPIO_H
+#define	MCAL_P33SMPS_GPIO_H
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include <stdint.h>
@@ -75,7 +75,7 @@ typedef enum {
     GPIO_PIN_12 = 0b1100,  // GPIO is at port pin #12
     GPIO_PIN_13 = 0b1101,  // GPIO is at port pin #13
     GPIO_PIN_14 = 0b1110,  // GPIO is at port pin #14
-    GPIO_PIN_15 = 0b1111,  // GPIO is at port pin #15
+    GPIO_PIN_15 = 0b1111   // GPIO is at port pin #15
 }GPIOx_PIN_e; // GPIO port pin index selection
 
 typedef enum {
@@ -100,12 +100,12 @@ typedef enum {
 
 typedef enum {
     GPIO_CNPU_ENABLED = 0b1,  // GPIO weak pull-up resistor enabled
-    GPIO_CNPU_DISABLED  = 0b0 // GPIO weak pull-up resistor disabled
+    GPIO_CNPU_DISABLED = 0b0 // GPIO weak pull-up resistor disabled
 }CNPUx_ENABLE_e; // GPIO weak pull-up resistor enabled/disabled selection
 
 typedef enum {
     GPIO_CNPD_ENABLED = 0b1,  // GPIO weak pull-down resistor enabled
-    GPIO_CNPD_DISABLED  = 0b0 // GPIO weak pull-down resistor disabled
+    GPIO_CNPD_DISABLED = 0b0 // GPIO weak pull-down resistor disabled
 }CNPDx_ENABLE_e; // GPIO weak pull-down resistor enabled/disabled selection
 
 /*!GPIO_CONFIG_t
@@ -115,50 +115,25 @@ typedef enum {
  * such as analog inputs or remappable pins.
  * Please refer to the device data sheet for details.
  * ****************************************************************************************/
-typedef struct {
-    volatile GPIOx_PORT_e port : 3;      // Bit 2-0: Port index (0-7)
-    volatile GPIOx_PIN_e  pin : 4;       // Bit 6-3: Port pin index (0-15)
-    volatile ANSELx_AD_e  ad_select : 1; // Bit 7: ANSELx analog/digital selection (1/0)
-    volatile TRISx_IO_e   io_select : 1; // Bit 8: TRISx input/output selection (1/0)
-    volatile LATx_HL_e    hl_select : 1; // Bit 9: LATx high/low selection (1/0)
-    volatile ODCx_ODPP_e  odpp_select : 1;   // Bit 10: ODCx open drain/push-pull mode selection (1/0)
-    volatile CNPUx_ENABLE_e  wpu_enable : 1; // Bit 11: CNPUx weak pull-up resistor enabled/disabled selection (1/0)
-    volatile CNPDx_ENABLE_e  wpd_enable : 1; // Bit 12: CNPDx weak pull-down resistor enabled/disabled selection (1/0)
-    volatile unsigned : 1;               // Bit 13: (reserved)
-    volatile unsigned : 1;               // Bit 14: (reserved)
-    volatile unsigned : 1;               // Bit 15: (reserved)
-}__attribute__((packed))GPIO_CONFIG_t;
-
 typedef union {
-    volatile GPIO_CONFIG_t bits;
+
+    struct {
+        volatile GPIOx_PORT_e port : 3;      // Bit 2-0: Port index (0-7)
+        volatile GPIOx_PIN_e  pin : 4;       // Bit 6-3: Port pin index (0-15)
+        volatile ANSELx_AD_e  ad_select : 1; // Bit 7: ANSELx analog/digital selection (1/0)
+        volatile TRISx_IO_e   io_select : 1; // Bit 8: TRISx input/output selection (1/0)
+        volatile LATx_HL_e    hl_select : 1; // Bit 9: LATx high/low selection (1/0)
+        volatile ODCx_ODPP_e  odpp_select : 1;   // Bit 10: ODCx open drain/push-pull mode selection (1/0)
+        volatile CNPUx_ENABLE_e  wpu_enable : 1; // Bit 11: CNPUx weak pull-up resistor enabled/disabled selection (1/0)
+        volatile CNPDx_ENABLE_e  wpd_enable : 1; // Bit 12: CNPDx weak pull-down resistor enabled/disabled selection (1/0)
+        volatile unsigned : 1;               // Bit 13: (reserved)
+        volatile unsigned : 1;               // Bit 14: (reserved)
+        volatile unsigned : 1;               // Bit 15: (reserved)
+    }__attribute__((packed)) bits;
+
     volatile uint16_t value;
-}GPIO_DEVICE_PIN_CONFIG_t; // Device pin configuration
 
-
-
-// ==============================================================================================
-// PUBLIC FUNCTION PROTOTYPES
-// ==============================================================================================
-
-
-extern volatile uint16_t gpio_ansel_init(void);
-extern volatile uint16_t gpio_cnpu_init(void);
-extern volatile uint16_t gpio_cnpd_init(void);
-extern volatile uint16_t gpio_odc_init(void);
-extern volatile uint16_t gpio_tris_init(void);
-extern volatile uint16_t gpio_lat_init(void);
-
-extern volatile uint16_t gpio_init(void);
-
-
-extern volatile uint16_t gpio_tris_config(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
-extern volatile uint16_t gpio_set_tris(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
-extern volatile uint16_t gpio_set_lat(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
-extern volatile uint16_t gpio_set_odc(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
-extern volatile uint16_t gpio_set_cnpu(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
-extern volatile uint16_t gpio_set_cnpd(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
-
-extern volatile uint16_t gpio_set_io_config(volatile GPIO_DEVICE_PIN_CONFIG_t pin_cfg);
+}GPIO_CONFIG_t; // Device pin configuration
 
 
 /* ********************************************************************************************** */
@@ -740,7 +715,7 @@ extern volatile uint16_t gpio_set_io_config(volatile GPIO_DEVICE_PIN_CONFIG_t pi
         ANSEL_REG_ANA0 = 1, // Analog input ANA0 ANSEL register index
         #endif
         #ifdef ANSELA
-        ANSEL_REG_ANA1 = 0, // Analog input ANA1 ANSEL register index
+        ANSEL_REG_ANA1 = 0  // Analog input ANA1 ANSEL register index
         #endif
     }ANSELx_REG_e;  // ANSELx Register index where 0=Port A, 1=Port B, 2=Port C , 3=Port D, 4=Port E
 
@@ -828,7 +803,7 @@ extern volatile uint16_t gpio_set_io_config(volatile GPIO_DEVICE_PIN_CONFIG_t pi
         ANSEL_PIN_ANA0 = 2, // Analog input ANA0 ANSEL register bit index
         #endif
         #ifdef ANSELA
-        ANSEL_PIN_ANA1 = 1, // Analog input ANA1 ANSEL register bit index
+        ANSEL_PIN_ANA1 = 1  // Analog input ANA1 ANSEL register bit index
         #endif
     }ANSELx_PIN_e;  // ANSELx Register index where 0=Port A, 1=Port B, 2=Port C , 3=Port D, 4=Port E
 
@@ -839,6 +814,13 @@ extern volatile uint16_t gpio_set_io_config(volatile GPIO_DEVICE_PIN_CONFIG_t pi
 #endif
 
 
+// ==============================================================================================
+// PUBLIC FUNCTION PROTOTYPES
+// ==============================================================================================
 
-#endif	/* __MCAL_P33_SMPS_GPIO_H__ */
+extern volatile uint16_t smpsGPIO_Initialize(void);
+extern volatile uint16_t smpsGPIO_SetIOConfig(volatile GPIO_CONFIG_t pin_cfg);
+
+
+#endif	/* MCAL_P33SMPS_GPIO_H */
 

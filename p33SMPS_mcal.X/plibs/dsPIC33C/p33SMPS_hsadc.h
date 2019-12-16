@@ -21,8 +21,8 @@
  *
  * ***********************************************************************************************/
 
-#ifndef _P33SMPS_HSADC_H_
-#define _P33SMPS_HSADC_H_
+#ifndef MCAL_P33SMPS_HSADC_H
+#define MCAL_P33SMPS_HSADC_H
 
 #include <stdint.h>
 #include <math.h>
@@ -276,11 +276,12 @@
     #define DEVICE_DEFAULT_AVDD 3.300 // if device VDD is not defined in this project, define it for standard value of 3.3V
 #endif
 
-#define ADC_VREF        DEVICE_DEFAULT_AVDD     // ADC reference voltage in [V]
-#define ADC_RES_BIT     12.0    // ADC resolution in integer
-#define ADC_RES         (uint16_t)(pow(2, ADC_RES_BIT)-1)    // ADC resolution in integer
-#define ADC_SCALER      (float)(((float)(ADC_RES))/((float)(ADC_VREF))) // ADC Scaling in ticks/V
-
+#define ADC_VREF            DEVICE_DEFAULT_AVDD     // ADC reference voltage in [V]
+#define ADC_RES_BIT         12.0    // ADC resolution in integer
+#define ADC_RES             (uint16_t)(pow(2, ADC_RES_BIT)-1)    // ADC resolution in integer
+#define ADC_SCALER          (float)(((float)(ADC_RES))/((float)(ADC_VREF))) // ADC Scaling in ticks/V
+#define ADC_GRANULARITY     (float)(ADC_REF / pow(2.0, ADC_RES)) // ADC granularity in [V/tick]
+    
 #define ADC_ANx_INTERRUPT_ENABLE        1       // Bit setting for enabled interrupts of a dedicated analog input
 #define ADC_ANx_INTERRUPT_DISABLE       0       // Bit setting for disabled interrupts of a dedicated analog input
 
@@ -4668,28 +4669,27 @@ typedef struct {
 // ==============================================================================================
 // Global Function Prototypes
 // ==============================================================================================
-extern volatile uint16_t hsadc_adc_module_initialize( volatile HSADC_ADMODCFG_t adc_cfg );
-extern volatile uint16_t hsadc_adc_input_initialize( volatile HSADC_ADCANCFG_t adin_cfg );
+extern volatile uint16_t smpsADC_Module_Iniitalize( volatile HSADC_ADMODCFG_t adc_cfg );
+extern volatile uint16_t smpsADC_ADInput_Initialize( volatile HSADC_ADCANCFG_t adin_cfg );
 
 
-extern volatile uint16_t hsadc_module_power_up(void);
-extern volatile uint16_t hsadc_module_power_down(void);
-extern volatile uint16_t hsadc_module_enable(void);
-extern volatile uint16_t hsadc_module_disable(void);
-extern volatile uint16_t hsadc_module_reset(void);
+extern volatile uint16_t smpsADC_Module_PowerUp(void);
+extern volatile uint16_t smpsADC_Module_PowerDown(void);
+extern volatile uint16_t smpsADC_Module_Enable(void);
+extern volatile uint16_t smpsADC_Module_Disable(void);
+extern volatile uint16_t smpsADC_Module_Reset(void);
 
-extern volatile uint16_t hsadc_adc_core_power_on(volatile uint16_t index);
-extern volatile uint16_t hsadc_adc_cores_check_ready(void);
+extern volatile uint16_t smpsADC_Core_PowerUp(volatile uint16_t index);
+extern volatile uint16_t smpsADC_Core_CheckReady(void);
 
+extern volatile uint16_t smpsADC_ADInput_SetMode(volatile HSADC_ADCANCFG_t adin_cfg);
+extern volatile uint16_t smpsADC_ADInput_SetTriggerSource(volatile HSADC_ADCANCFG_t adin_cfg);
+extern volatile uint16_t smpsADC_ADInput_SetTriggerMode(volatile HSADC_ADCANCFG_t adin_cfg);
+extern volatile uint16_t smpsADC_ADInput_SetInterrupt(volatile HSADC_ADCANCFG_t adin_cfg);
 
-extern volatile uint16_t hsadc_set_adc_input_mode(volatile HSADC_ADCANCFG_t adin_cfg);
-extern volatile uint16_t hsadc_set_adc_input_trigger_source(volatile HSADC_ADCANCFG_t adin_cfg);
-extern volatile uint16_t hsadc_set_adc_input_trigger_mode(volatile HSADC_ADCANCFG_t adin_cfg);
-extern volatile uint16_t hsadc_set_adc_input_interrupt(volatile HSADC_ADCANCFG_t adin_cfg);
-
-extern volatile uint16_t hsadc_init_adc_comp(volatile uint16_t index, volatile HSADC_ADCMP_CONFIG_t adcmp_cfg);
-extern volatile uint16_t hsadc_init_adc_filter(volatile uint16_t index, volatile HSADC_ADFLT_CONFIG_t adflt_cfg);
+extern volatile uint16_t smpsADC_ADComp_Initialize(volatile uint16_t index, volatile HSADC_ADCMP_CONFIG_t adcmp_cfg);
+extern volatile uint16_t smpsADC_ADFilter_Initialize(volatile uint16_t index, volatile HSADC_ADFLT_CONFIG_t adflt_cfg);
 
 
 #endif /* dsPIC33CH/CK only */
-#endif   /* end of _P33SMPS_HSADC_H_ */
+#endif /* end of MCAL_P33SMPS_HSADC_H */

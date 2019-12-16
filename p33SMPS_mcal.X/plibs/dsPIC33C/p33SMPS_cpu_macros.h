@@ -26,8 +26,8 @@
  *
  *****************************************************************************/
  
-#ifndef _MCAL_P33_SMPS_CPU_MACROS_H_
-#define _MCAL_P33_SMPS_CPU_MACROS_H_
+#ifndef _APPLICATION_LAYER_DEFINES_H_
+#define _APPLICATION_LAYER_DEFINES_H_
 
 #include <stdint.h>
 #include "stdbool.h"
@@ -42,15 +42,22 @@
 #define PWRSAV_SLEEP	asm volatile ("PWRSAV #0\n")
 #define CPU_RESET		asm volatile ("RESET\n")
 
-//#ifdef (CTXTSTAT)
-//  #define ALTWREG_SWAP(x)    asm volatile ( "PUSH.W W0 \n CTXTSWP #" + x + "POP.W W0 \n")
-//#endif
-
+/*!ALTWREG_SWAP()
+ * ********************************************************************************
+ * Summary: Swaps the current working register set
+ * 
+ * Parameters:
+ *      uint16_t x: New Working Register Set (Target)
+ * 
+ * Returns: 
+ *      uint16_t:   Previous Working Register Set (Origin)
+ * 
+ * ********************************************************************************/
 #define ALTWREG_SWAP(x) __extension__ ({ \
     volatile uint16_t __x = (x), __v; \
-    __asm__ ("ctxtswp #%0;\n\t" : "=d" (__v) : "d" (__x)); __v; \
+    __asm__ ("ctxtswp %1;\n\t" : "=d" (__v) : "d" (__x)); __v; \
 })    
 
 
-#endif  /* _MCAL_P33_SMPS_CPU_MACROS_H_ */
+#endif  /* _APPLICATION_LAYER_DEFINES_H_ */
 

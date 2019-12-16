@@ -54,7 +54,7 @@
  * are set here.
  * ***********************************************************************************************/
 
-inline volatile uint16_t gsirq_irq_initialize(volatile INTERRUPT_CONFIG_t intcon)
+volatile uint16_t gsirq_irq_initialize(volatile INTERRUPT_CONFIG_t intcon)
 {
 
     volatile uint16_t fres=0;
@@ -100,7 +100,7 @@ inline volatile uint16_t gsirq_irq_initialize(volatile INTERRUPT_CONFIG_t intcon
  * a unsigned integer number
  * ***********************************************************************************************/
 
-inline volatile uint16_t gsirq_get_current_irq_priority_level(void)
+volatile uint16_t gsirq_get_current_irq_priority_level(void)
 {
 
     volatile uint16_t reg_buf=0;
@@ -128,7 +128,7 @@ inline volatile uint16_t gsirq_get_current_irq_priority_level(void)
  * a unsigned integer number
  * ***********************************************************************************************/
 
-inline volatile uint16_t gsirq_get_current_irq_vector(void)
+volatile uint16_t gsirq_get_current_irq_vector(void)
 {
     return(INTTREGbits.VECNUM);
 }
@@ -149,7 +149,7 @@ inline volatile uint16_t gsirq_get_current_irq_vector(void)
  * and the catastrophic overflow event trap. (on/off options) 
  * ***********************************************************************************************/
 
-inline volatile uint16_t gsirq_soft_traps_initialize(
+volatile uint16_t gsirq_soft_traps_initialize(
                     uint16_t accumulator_a_overflow_trap_enable, 
                     uint16_t accumulator_b_overflow_trap_enable, 
                     uint16_t accumulator_catastrophic_overflow_trap_enable)
