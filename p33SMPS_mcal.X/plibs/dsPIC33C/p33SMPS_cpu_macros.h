@@ -26,8 +26,8 @@
  *
  *****************************************************************************/
  
-#ifndef _APPLICATION_LAYER_DEFINES_H_
-#define _APPLICATION_LAYER_DEFINES_H_
+#ifndef _MCAL_P33_SMPS_CPU_MACROS_H_
+#define _MCAL_P33_SMPS_CPU_MACROS_H_
 
 #include <stdint.h>
 #include "stdbool.h"
@@ -46,5 +46,11 @@
 //  #define ALTWREG_SWAP(x)    asm volatile ( "PUSH.W W0 \n CTXTSWP #" + x + "POP.W W0 \n")
 //#endif
 
-#endif  /* _APPLICATION_LAYER_DEFINES_H_ */
+#define ALTWREG_SWAP(x) __extension__ ({ \
+    volatile uint16_t __x = (x), __v; \
+    __asm__ ("ctxtswp #%0;\n\t" : "=d" (__v) : "d" (__x)); __v; \
+})    
+
+
+#endif  /* _MCAL_P33_SMPS_CPU_MACROS_H_ */
 
