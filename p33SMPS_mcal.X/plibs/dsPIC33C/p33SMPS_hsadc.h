@@ -4570,7 +4570,7 @@ typedef union {
 // ==============================================================================================
  typedef struct {
     volatile ADCOREx_SAMC_e samc;       // Shared/Dedicated ADC Core Conversion Delay Selection bits
-    #ifdef ADCON4_SAMCxEN_e
+    #if ADC_CORE_COUNT > 1
     volatile ADCON4_SAMCxEN_e samc_en;  // Flag indicating if sample delay should be enabled/disabled
     #endif
     volatile ADCOREx_EISEL_e eisel;     // ADC Core x Early Interrupt Time Selection bits

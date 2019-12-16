@@ -41,9 +41,6 @@
             <file>file:/C:/_dsmps/FRMWRK4/template/firmware/plib/p33SMPS_mcal.X/nbproject/Makefile-__P33SMPS_CH_SLV__.mk</file>
         </group>
         <group>
-            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_cpu_macros.h</file>
-            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_irq.h</file>
-            <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_irq.c</file>
             <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_hsadc.h</file>
             <file>file:/D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_hsadc.c</file>
         </group>
