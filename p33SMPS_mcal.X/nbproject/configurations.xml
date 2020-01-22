@@ -17,6 +17,7 @@
         <itemPath>plibs/dsPIC33C/p33SMPS_gpio.h</itemPath>
         <itemPath>plibs/dsPIC33C/p33SMPS_mailboxes.h</itemPath>
         <itemPath>plibs/dsPIC33C/p33SMPS_uart.h</itemPath>
+        <itemPath>plibs/dsPIC33C/p33SMPS_crc.h</itemPath>
       </logicalFolder>
       <itemPath>p33SMPS_plib.h</itemPath>
       <itemPath>plibs/p33SMPS_devices.h</itemPath>
@@ -40,6 +41,7 @@
         <itemPath>plibs/dsPIC33C/p33SMPS_mailboxes.c</itemPath>
         <itemPath>plibs/dsPIC33C/p33SMPS_uart.c</itemPath>
         <itemPath>plibs/dsPIC33C/p33SMPS_hspwm_c.c</itemPath>
+        <itemPath>plibs/dsPIC33C/p33SMPS_crc.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -724,7 +726,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>RealICEPlatformTool</platformTool>
         <languageToolchain>XC16</languageToolchain>
-        <languageToolchainVersion>1.41</languageToolchainVersion>
+        <languageToolchainVersion>1.36</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
@@ -1597,8 +1599,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-2beff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/Firmware/Debug-UART_Protocol/plib/p33SMPS_mcal.X/debug/__P33SMPS_CK__/p33SMPS_mcal_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.ledbrightness" value="5"/>

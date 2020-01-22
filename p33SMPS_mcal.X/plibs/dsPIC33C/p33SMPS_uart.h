@@ -107,7 +107,7 @@
 #endif
 
 #if ( UART_UART_COUNT >= 4 )
-  #pragma message "=== selected device is not supported by this library ==="
+  #pragma message "=== selected UART instance is not supported by this device ==="
 #endif
 
 
@@ -1376,22 +1376,22 @@
     }UART_BAUDRATE_SETTING_e;
 
     typedef enum {
-        UART_DATA_BITS_7 = 7,
-        UART_DATA_BITS_8 = 8,
-        UART_DATA_BITS_9 = 9
-    }UART_DATA_BIT_SETTING_e;
+        UART_DATA_BITS_7 = 7,   // Seven data bits
+        UART_DATA_BITS_8 = 8,   // Eight data bits
+        UART_DATA_BITS_9 = 9    // Nine data bits
+    }UART_DATA_BIT_SETTING_e;   // UART Data Bits Settings
 
     typedef enum {
-        UART_STOP_BITS_1 = 1,
-        UART_STOP_BITS_15 = 15,
-        UART_STOP_BITS_2 = 2
-    }UART_STOP_BIT_SETTING_e;
+        UART_STOP_BITS_1 = 1,   // One Stop-Bit
+        UART_STOP_BITS_15 = 15, // 1.5 Stop-Bits
+        UART_STOP_BITS_2 = 2    // Two Stop-Bits
+    }UART_STOP_BIT_SETTING_e;   // UART Stop-Bit Settings
 
     typedef enum {
-        UART_PARITY_NONE = 0,
-        UART_PARITY_ODD = 1,
-        UART_PARITY_EVEN = 2
-    }UART_PARITY_SETTING_e;
+        UART_PARITY_NONE = 0,   // No Parity 
+        UART_PARITY_ODD = 1,    // Odd Parity
+        UART_PARITY_EVEN = 2    // Even Parity
+    }UART_PARITY_SETTING_e;     // UART Parity Settings
     
     typedef enum {
         UART_FLOW_CONTROL_NONE = 0,
@@ -1450,6 +1450,7 @@
 // Prototypes
 extern volatile uint16_t smpsUART_OpenPort(volatile UART_t* uart);
 extern volatile uint16_t smpsUART_Close(volatile UART_t* uart);
+extern volatile uint16_t smpsUART_Dispose(volatile UART_t* uart);
 
 extern volatile uint16_t smpsUART_Initialize(volatile uint16_t uart_instance, volatile UART_CONFIG_t config);
     
@@ -1467,7 +1468,7 @@ extern volatile uint16_t smpsUART_Disable(volatile UART_t uart);
 extern volatile uint16_t smpsUART_PowerOn(volatile uint16_t uart_instance);
 extern volatile uint16_t smpsUART_PowerOff(volatile uint16_t uart_instance);
 
-extern volatile uint16_t smpsUART_GetCRC16(volatile uint8_t *buffer, volatile uint8_t start, volatile uint8_t length);
+extern volatile uint16_t smpsUART_GetStandardCRC16(volatile uint8_t *buffer, volatile uint8_t start, volatile uint8_t length);
 
 #endif  /* __MCAL_P33SMPS_UART_H__ */
 // End of File
