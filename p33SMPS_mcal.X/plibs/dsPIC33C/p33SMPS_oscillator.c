@@ -36,7 +36,7 @@
 #include <stdint.h>
 
 #include "../p33SMPS_devices.h"
-#include "p33SMPS_oscillator.h"
+#include "../../p33SMPS_plib.h"
 
 /* ************************************************************************************************
  * PRIVATE DEFINES

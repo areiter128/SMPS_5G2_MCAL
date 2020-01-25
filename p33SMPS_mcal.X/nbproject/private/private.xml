@@ -35,6 +35,8 @@
         <group name="frmwrk4">
             <file>file:/C:/_dsmps/FRMWRK4/template/firmware/plib/p33SMPS_mcal.X/nbproject/Makefile-__P33SMPS_CH_SLV__.mk</file>
         </group>
-        <group/>
+        <group>
+            <file>file:/D:/Firmware/SMPS5G2-Sandbox/plib/p33SMPS_mcal.X/plibs/dsPIC33C/p33SMPS_oscillator.c</file>
+        </group>
     </open-files>
 </project-private>
