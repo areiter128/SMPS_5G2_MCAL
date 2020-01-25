@@ -28,8 +28,8 @@
 
 // This is a guard condition so that contents of this file are not included
 // more than once.  
-#ifndef __P33SMPS_PERIPHERAL_LIBRARY_H__
-#define	__P33SMPS_PERIPHERAL_LIBRARY_H__
+#ifndef _MCAL_P33SMPS_PERIPHERAL_LIBRARY_H_
+#define	_MCAL_P33SMPS_PERIPHERAL_LIBRARY_H_
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 #include <stdint.h> // For uint16_t definition                      
@@ -37,10 +37,17 @@
 
 #include "plibs/p33SMPS_devices.h" // Triage dsPIC33 device families
 
+// Library Base Version
+#define MCAL_VERSION    500 // first digit  = Major
+                            // second digit = Minor
+                            // third digit  = Revision 
+                            // Example: 500 = v5.0.0
+
 // include peripheral library headers for the selected device
 #if defined (__P33SMPS_CH__) || defined (__P33SMPS_CK__)
 
 #include "plibs/dsPIC33C/p33SMPS_cpu_macros.h"
+#include "plibs/dsPIC33C/p33SMPS_crc.h"
 #include "plibs/dsPIC33C/p33SMPS_dsp.h"
 #include "plibs/dsPIC33C/p33SMPS_gpio.h"
 #include "plibs/dsPIC33C/p33SMPS_hsadc.h"
@@ -57,10 +64,25 @@
   #pragma message "p33SMPS_plib Warning: selected device is currently not supported by the peripheral libraries"
 #endif
 
-// peripheral library global data structures
+/*!Peripheral Library Global Data Objects
+ * ********************************************************************************
+ * The following declarations are used to make internal data objects publicly 
+ * accessible.
+ * 
+ * a) OSCILLATOR_SYSTEM_FREQUENCIES_t system_frequencies
+ * 
+ *    This data object holds all MCU-wide frequencies of main and auxiliary
+ *    oscillators, PLLs and further, timing-critical parameters which may
+ *    be used/required by other peripherals such as UART, CAN, PWM, etc.
+ *    
+ *    The parameters of this object are automatically updated when one or
+ *    more of the basic clock settings are changed.
+ * 
+ * ********************************************************************************/
+
 extern volatile OSCILLATOR_SYSTEM_FREQUENCIES_t system_frequencies;
 
 
 
-#endif	/* __P33SMPS_PERIPHERAL_LIBRARY_H__ */
+#endif	/* MCAL_P33SMPS_PERIPHERAL_LIBRARY_H */
 
