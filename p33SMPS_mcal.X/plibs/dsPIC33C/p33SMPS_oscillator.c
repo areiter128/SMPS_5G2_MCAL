@@ -32,11 +32,8 @@
  * PRIVATE DEFINES
  * ************************************************************************************************/
 
-#include <xc.h>
-#include <stdint.h>
-
-#include "../p33SMPS_devices.h"
-#include "../../p33SMPS_plib.h"
+// Include Header Files
+#include "p33SMPS_oscillator.h"
 
 /* ************************************************************************************************
  * PRIVATE DEFINES
