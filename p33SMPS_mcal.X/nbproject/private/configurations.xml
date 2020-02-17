@@ -5,7 +5,7 @@
   <confs>
     <conf name="__P33SMPS_CH_MSTR__" type="3">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.41\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc16\v1.50\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -23,7 +23,7 @@
     </conf>
     <conf name="__P33SMPS_CH_SLV__" type="3">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.36\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc16\v1.50\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
@@ -41,7 +41,7 @@
     </conf>
     <conf name="__P33SMPS_CK__" type="3">
       <platformToolSN></platformToolSN>
-      <languageToolchainDir>C:\Program Files (x86)\Microchip\xc16\v1.41\bin</languageToolchainDir>
+      <languageToolchainDir>C:\Program Files\Microchip\xc16\v1.50\bin</languageToolchainDir>
       <mdbdebugger version="1">
         <placeholder1>place holder 1</placeholder1>
         <placeholder2>place holder 2</placeholder2>
